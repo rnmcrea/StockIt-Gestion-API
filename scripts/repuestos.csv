@@ -1,0 +1,1356 @@
+﻿codigo;nombre
+MAR0000001129;addition tension roller (ø21-5)                   
+MAR00000027-3;feed roller rubber 
+MAR00001098-3;2p windows                                        
+MAR0000IH0013;15-zynq cam sensor board                          
+MAR0000IH0302;15-stopper roller assy                            
+MAR0000IH0303;15-module shaft 1 assy                            
+MAR0000IH0304;15-module shaft 2 assy                            
+MAR0000IH0305;15-module shaft 3 assy                            
+MAR0000IH0306;15-module shaft 4 assy                            
+MAR0000IH0307;15-lower return roller shaft assy                 
+MAR0000IH0315;ih-main roller rubber                             
+MAR0000IH0802;ih-belt 402 (exl-101-402) : 1t                    
+MAR0000IH1001;"ih-touch tft lcd (4,3"")                           "
+MAR0000IH1100;ih-smps                                           
+MAR0000IH1200;ih-cis sensor bottom-19                           
+MAR0000NV0301;nv-tds tension roller (?16)                       
+MAR0000ST1005;cf trans roller + shak + assy                     
+MAR000MXL4879;timing belt 
+MAR000MXL6411;timing belt 
+MAR000VISOR30;external display magner 30                        
+MAR0010461082;split roller 1046+1082 
+MAR00116XL025;timing belt 
+MAR00118XL025;timing belt 
+MAR0015000G65;g- 65a oring 
+MAR0015001140;kicker roller rubber 
+MAR00200CPU01;tarjeta micro-procesadora magner 
+MAR002K200550;guide plate m35d 
+MAR002K200552;encorder dust cover 
+MAR002K202095;stacker sensor holder m35d 
+MAR002SD20450;transistor 
+MAR00301004A0;power transformer 35d 
+MAR003K100130;note guide complete assembly 
+MAR003K200901;assist wheel m35dc 
+MAR003K200976;bill guide 
+MAR003K201385;staker wheel m35 2003 
+MAR003K202085;encoder m35 2003 
+MAR003K202087;note guide (r+l) par 
+MAR004K100071;display board (35-10) 
+MAR004K200430;oilless bearing 
+MAR004K200623;separator roller assy 
+MAR004K200639;stacker sensor rx 
+MAR004K200649;hopper sensor 35 pcb assy 
+MAR004K201019;large gear white 
+MAR004K201619;roller rubber 
+MAR004K201678;feed roller assembly 
+MAR004K20185L;"guide spring ""a"" left "
+MAR004K20185R;"guide spring ""b"" right "
+MAR004K201909;roller m35 
+MAR004K202204;timing pulley 
+MAR004K202606;kick roller assembly 
+MAR004K202792;pg-2bc hopper sensor pcb assembly 
+MAR004K203678;separate roller sub-assembly 
+MAR004K203737;kick roller rubber 
+MAR004K203879;tps708 count sensor rx pcb assemb 
+MAR004K204309;aux roller m35 2003 
+MAR004K204317;kick rubber black 
+MAR004K204538;feed roller rubber assembly 
+MAR004K204540;center roller assembly 
+MAR004K205587;idle gear m35 2003 
+MAR004K205588;kick roller gear m35 2003                         
+MAR004K205593;fly wheel pulley m35-2003 
+MAR004K205595;fly wheel gear assy m35 2003 
+MAR004K205600;separate roller assy m35 2003 
+MAR004K216260;center roller assembly 
+MAR004K2677TP;count sensor rx pcb 
+MAR00688ZZLNR;ball bearing 
+MAR00B40S2M23;timming belt m35 2003 
+MAR00B75MXL64;timing belt 
+MAR00BC350B00;cpu board m35-10 
+MAR00CN420020;motor m35 2003 
+MAR00DLC4645P;display m75 series (lcd only) 
+MAR00DME44B13;motor (35dc/35-10) 
+MAR00EHG00198;bill guide roller assy 75 
+MAR00FCL8K000;clutch m35dc 
+MAR00FS2301-2;main motor assy (new)                             
+MAR00G1100000;"o""ring m35 2003 "
+MAR00HK210123;support rolr 2 shaft                              
+MAR00HK210140;space ring0805-02                                 
+MAR00HK210202;tr brk                                            
+MAR00HK210312;s1 ts rolr brk ass´y                              
+MAR00HK210313;s2 ts rolr brk ass´y                              
+MAR00HK212102;discharing brush 30*16mm sus                      
+MAR00HK212103;discharing brush 30*8mm sus                       
+MAR00IWC06120;clutch holder assembly 
+MAR00J2F4A03B;power switch completely interchan 
+MAR00K2001454;guide m35 2003 
+MAR00K203210T;tps-824 door sensor pcb assembly 
+MAR00KOA72766;switching power supply assembly 
+MAR00KP901A00;visor externo magner 150 
+MAR00KPM15000;kit de polinero magner 150 
+MAR00M1002400;pinion gear a 
+MAR00MR02IN20;power sw m35 2003 
+MAR00MSR80300;power switch (220v) 
+MAR00PG2BCBD0;hopper sensor m35-2003 
+MAR00PS6X0250;polyslider m35dc 0.25 
+MAR00PS6X0500;polyslider m35dc 0.5 
+MAR00RS232150;cable para conectar pc a magner 150
+MAR00S1200000;input receptacle m35-2003 
+MAR00SET-1071;trans. tens rollers assembly                      
+MAR00TLN101AB;count sensor tx pcb assy m35-2 
+MAR00TLN110BD;stacker sensor tx pcb assy m35 
+MAR00TLP824BD;pulse sensor pbc assy 
+MAR00TPS601AB;stacker sensor tx pcb assy 
+MAR00TPS708BD;count sensor rx pcb assy m35-2 
+MAR00VISOR165;visor externo magner 165                          
+MAR00Y100Z001;plato principal                                   
+MAR0100721124;mr sensor board with mr sensor 
+MAR0150000046;bearing (688zzf)(2-pocket) 
+MAR0150001001;"2p-main board ass""y "
+MAR0150001002;"2p-lcd display board ass""y "
+MAR0150001003;"motor drive board ass""y (2p) "
+MAR0150001006;2p cf-1r board 
+MAR0150001008;"(cis 4) main board ass""y "
+MAR0150001013;rs 232 6 external board assy 
+MAR0150001068;cf&cis operation harness 
+MAR0150001077;mr roller pulley                                  
+MAR0150001078;sub motor driving pulley                          
+MAR0150001079;hopper guide pinion (pom black) 
+MAR0150001096;2p-hopper guide cover (black) 
+MAR0150001098;lcd window 
+MAR0150001107;hopper guide rack (16-3,16-4) 
+MAR0150001110;stacker drive pulley                              
+MAR0150001142;joint belt 
+MAR0150001143;main motor belt 
+MAR0150001144;sub motor belt 
+MAR0150001145;stacker belt 
+MAR0150001146;sorting belt 
+MAR0150001235;main encoder harness 
+MAR0150001240;cf&cis operation harness                          
+MAR0150001244;hopper sensor harness 
+MAR0150001249;rear sensor harness 
+MAR0150001250;front sensor harness 
+MAR0150001251;mr-ah sensor harness 
+MAR0150001252;cis counter sensor harness 
+MAR0150001253;cis image sensor harness 
+MAR0150001254;cf counter led & sensor harness 
+MAR0150001256;cis & cf power harness 
+MAR0150001257;cis & cf signal harness 
+MAR0150001261;graphic lcd 
+MAR0150001265;smps 
+MAR0150001267;cis sensor (white) 
+MAR0150001312;rear sensor harness 
+MAR0150001313;ir frpont sensor harness 
+MAR0150001317;cf ir signal harness 
+MAR0150001318;cis & cf/ir power harness 
+MAR0150001501;2p cf-ir board 
+MAR0150001503;2p cf board 
+MAR0150002011;calibration paper set for m150                    
+MAR01501078-1;main motor driving pulley                         
+MAR0150SET209;frame sensor board 
+MAR0150ST1003;"cis counter sensor ass""y "
+MAR0150ST1006;"2p hopper sebsur ass""y (cn4) "
+MAR0150ST1009;bite union roller left 
+MAR0150ST1012;kicker roller assembly 
+MAR0150ST1014;"mr brush + shaft ass""y "
+MAR0150ST1019;"split roller + shaft ass""y "
+MAR0150ST1020;"reject inside led & sensor ass""y "
+MAR0150ST1021;reject count sensor (cn7l) 
+MAR0150ST1022;reject count sensor (cn7r) 
+MAR0150ST1023;"main encoder led & sensor ass""y "
+MAR0150ST1024;reject count led board (cn8l/cn8r 
+MAR0150ST1031;sorting cam (with shaft)v2.0 
+MAR0150ST1032;turnocer roller assembly 
+MAR0150ST1033;sorting roller assembly v2.0 
+MAR0150ST1034;stacker driver roller 
+MAR0150ST1035;return roller assembly v2.0 
+MAR0150ST1036;main motor + harness (210mm) 
+MAR0150ST1037;sub motor + harness (340mm) 
+MAR0150ST1038;swin selector (solenoid) + harnes 
+MAR0150ST1044;hopper guide right 
+MAR0150ST1045;hopper guide left 
+MAR0150ST1046;"ir front ass""y "
+MAR0150ST1047;"ir rear ass""y "
+MAR0150ST1048;reject pocket assy 
+MAR0150ST1053;batch switch housing 
+MAR0150ST1054;start switch housing 
+MAR0150ST1061;stacker roller + shaft (2p) 
+MAR0150ST1065;of trans roller + shaftass 
+MAR0150ST1066;addition roller assembly 
+MAR0350000046;bearing lf-1680zz                                 
+MAR0350001072;main driving pulley                               
+MAR0350FS0012;counter led b/d (blue)                            
+MAR0350FS0013;counter sensor b/d (yellow)                       
+MAR0350FS0015;stacker encoder board assy (red)                  
+MAR0350FS0018;open s/w assy                                     
+MAR0350FS0302;split roller assy                                 
+MAR0350FS0313;mr brush                                          
+MAR0350FS0314;bite roller rubber                                
+MAR0350FS0315;kicker rolloer ruber                              
+MAR0350FS0501;tension roller spring                             
+MAR0350FS0802;belt s3m 159                                      
+MAR0350FS2600;md damper (303)                                   
+MAR0350FS2601;md damper (202)                                   
+MAR0350FS2700;cis sensor bottom                                 
+MAR0350FS2701;cis sensor top                                    
+MAR04K2037370;kick roller rubber m35 2003 
+MAR04K2037373;kick roller assembly m35-2003 
+MAR04K2038790;tln101a count sensor tx pcb assem 
+MAR04K2045400;center roller assy m35-2003 (mar004k2045400)
+MAR0HK2101281;rolr shaft b                                      
+MAR0HK2101391;gate tilt rolr                                    
+MAR0HK2102031;gate guide new                                    
+MAR0HK2102201;up body 3                                         
+MAR0HK2102251;trans rolr 6 new                                  
+MAR0HK2102441;rej cv new                                        
+MAR0HK2102561;skt 1 cv new                                      
+MAR0HK2102861;rej stk wheel new                                 
+MAR0HK2107021;bearing (l-1050zz)                                
+MAR0HK2108011;plt s2 new                                        
+MAR0HK2121011;discharing brush 30*35mm sus                      
+MAR0K20387901;tps601a stacker sensor rx pcb ass 
+MAR0K20387902;tln110 stacker sensor tx pcb asse 
+MAR0KAS100981;main power suplly bd assy m35 (mar00kas100981)
+MAR0RESMAG916;resorte magner 916                                
+MAR0SETIH0003;ih-lower reject roller assy                       
+MAR0SETIH0008;ih-uv top sensor unit assy (housing+board+filter+p
+MAR0SETIH0009;ih-uv bot sensor unit assy (plate+housing+pcb+sens
+MAR0SETIH0014;ih-hopper sensor board assy (pcb+sensor)          
+MAR0SETIH0016;"al
+ih-cam ass y (with shaft)                      "
+MAR0SETIH0017;ih-kicker motor assy(m) (kicker motor + harness)  
+MAR0SETIH0018;ih-module motor assy(m) (module motor + harness)  
+MAR0SETIH0019;ih-stacker motor assy(m) (stacker motor + harness)
+MAR0Y200CPU01;tarjeta pantalla con panel                        
+MAR1500002012;cis jig for calibratio 
+MAR15001121-2;bite roller rubber 
+MAR15001141-1;link driving belt 
+MARSET-1010-1;bite roller assy (total)+ring 
+MARSET-1040-2;"cf front sensor ass""y "
+MARSET-1041-2;"cf rear sensor ass""y "
+MARSET-FS0016;stacker motor (with harness)                      
+MARSET-FS0021;swing selector assy (solenoin)(green)             
+MARSETIH00071;ih-mg sensor assy (spare) (mg sensor+board+mg guid
+CIR00CDS707EM;parte superior equipo cds707                      
+CIR0330SCH383;tarjeta chapa cencon                              
+CIR06900NR000;safe pins                                         
+CIR0CDS707BB0;bolsa azul para maquina cds 707                   
+CIR1300ACC309;rear connection module per ceniii                 
+CIR1300ACC335;support for main transport roller                 
+CIR1300ACC346;input/output encoder fork unit                    
+CIR1300ACC358;nt cable group for technical assistance           
+CIR1300ACC392;cds aligning unit                                 
+CIR1300ACC393;cds filter unit                                   
+CIR1300ACC415;rear hood hinge group                             
+CIR1300ACC417;canvas bag                                        
+CIR1300ACC425;brushless motor with z20 pulley 
+CIR1300ACC483;encoder assy forc                                 
+CIR1300ACC500;encoder assy fork                                 
+CIR1300ACC519;grupo hard disk per cds 707                       
+CIR1300ACC526;brushless motor with z20 pulley 
+CIR1300ACC528;brushless motor with 225 pulley                   
+CIR1300ACC531; lower flaps                                      
+CIR1300ACC575;pc sdm unit                                       
+CIR1300ACC611;blue bag group without logo for 7008c             
+CIR1300ACC651;assembled pc group                                
+CIR1300ACC653;pc sdm unit no display                            
+CIR1300ACC663;coins canvas bag lc (blue - no logo) group        
+CIR1300ACC668;pc cds-707 unit                                   
+CIR1300ACC673;rear connection module                            
+CIR1300ACC688;cds/sdm blue bag no logo                          
+CIR1300ACC721;plastic film reel 90mm with limit                 
+CIR1300ACC722;plastic film reel 90m without limit               
+CIR1300ACC748;"cds/sdm 2gb ram + 16gb ssd pc ""kf"" group          "
+CIR1300ACC850;cds-707 pc arbor group  (ex1300acc651)            
+CIR1300ACC984;inlane cassette                                   
+CIR1300ACC988;inlane black canvas bag without logo              
+CIR1300CLP010;10,00clp hopper asahi seiko sh410 + 2 extensions  
+CIR1300CLP050;50,00clp hopper asahi seiko sh410 + 1 extension   
+CIR1300CLP100;100,00clp hopper asahi seiko sh410 + 1 extension  
+CIR1300CLP101;100,00clp hopper asahi seiko sh410 + 1 extension  
+CIR1300CLP500;500,00clp hopper asahi seiko sh410 + 1 extension  
+CIR1300INS054;banknotes compactor cds 707 
+CIR1300INS078;cima sensor bv5000(sdm version)                   
+CIR1300INS097;bv5000 sensor tcr version (ast7000nt5-7008-7016)  
+CIR1300INS100;complete canvas bag frame for ast7008             
+CIR1300LEV007;diverter unit 
+CIR1300MOD060;cr90 verification kit composed from 71 g          
+CIR1300MOD185;pc interface                                      
+CIR1300MOD252;kit to upgrade from rev.4 to rev.5 cir1300mod252 +
+CIR1300PLA010;flat belts finished diverting roller              
+CIR1300PLA015;plastic film reel transparent                     
+CIR1300PLA016;plastic film reel with black stop                 
+CIR1300RIC134;kit of bv5000 fan and cover fixing                
+CIR1300RIC140;cs108 chile cds-803 cls assembly                  
+CIR1300RIC161;centrifuge disk replacement kit of cds-803        
+CIR1300RIC162;rotary closer kit replacement for cds-803         
+CIR1300RIC163;throw rump completefor cds-801                    
+CIR1300RIC174;belt and pulleys spare part only for cds          
+CIR1300RIC205;layer 3 without gear drive                        
+CIR1300RIC246;multicountry cash ray 90 sensor 
+CIR1300RIC390;cds filter pinching roller kit                    
+CIR1300RIC396;complete stock for ast7000                        
+CIR1300RUL105;recognition area encoder motion roller            
+CIR1300RUL106;gt3-2mgt-cash-ray transport                       
+CIR1300RUL112;printed eccentric ø24 h=8 with thread m3          
+CIR1300RUL114;mould eccentric ø24 h=8 (pu insert)               
+CIR1300RUL115;input printed eccentrics roller                   
+CIR1300RUL119;aligning device input rubber roll                 
+CIR1300RUL121;flat belts idle diveeting roller unit             
+CIR1300RUL124;cash-ray belt gear roller unit ø16                
+CIR1300RUL125;cr90 toothed belts diverter roller unit 022       
+CIR1300RUL126;cr90 belts diverter roller unit 022 with grooves  
+CIR1300RUL127;cr90 toothed belts diverting roller unit 020      
+CIR1300RUL128;sensor toothed belts sectioned roller unit 030    
+CIR1300RUL129;sensor toothed belts stretcher roller un          
+CIR1300RUL130;sensor toothed belts sectioned roller unit 020    
+CIR1300RUL131;rounded roller unit ø16 for flat belts            
+CIR1300RUL132;motor roller unit 035 (flat belts)                
+CIR1300RUL134;d.24,5 motor roller unit (flat belts)             
+CIR1300RUL140;flat belts diverting roller group                 
+CIR1300RUL143;rodiillo                                          
+CIR1300RUL148;output transmission roller                        
+CIR1300RUL150;cds deposit roller unit                           
+CIR1300RUL159;neutral switch roller unit flat belts             
+CIR1300RUL170;neutral switch roller unit flat belts             
+CIR1300RUL171;drive roller                                      
+CIR1300RUL180;easy roller motor                                 
+CIR1300RUL189;rubber roller group for aligner output            
+CIR1300RUL194;sdm drive roller for innervation                  
+CIR1300RUL195;exit innervation roller                           
+CIR1300SCH001;rollers low photo interrupter dist. 12-20mm (green
+CIR1300SCH003;photo interrupter dist. 20-45mm (black)           
+CIR1300SCH004;high photo interrupter dist.20-45mm (white)       
+CIR1300SCH020;photo interrupter dist. 20-45mm (red)             
+CIR1300STR054;lock + switch                                     
+CIR1300TRA020;cds pressor handling group                        
+CIR1300TRA027;middle t2.5 idler (m4)                            
+CIR1300TRA028;high t2.5 idler (m4)                              
+CIR1300TRA033;output fixed transmission roller                  
+CIR1300TRA047;ast7000 bv5000 singler unit                       
+CIR1300TRA050;rubbered pin low for paper alignm                 
+CIR1300TRA051;rubbered pin high for paper align                 
+CIR1300TRA053;retarding rollers motion                          
+CIR1300TRA057;lower t.2,5 idler                                 
+CIR1300TRA060;unidirectional pulley                             
+CIR1300TRA065;t 2,5 midle idler                                 
+CIR1300TRA066;brushless motor for exit transport                
+CIR1300TRA068;input plate position detector                     
+CIR1300TRA073;doubble joint                                     
+CIR1300TRA075;cds presser moving group                          
+CIR1300TRA079;sdm filter unit                                   
+CIR1300TRA080;neutral gear transmission input                   
+CIR1300TRA084;pulley with free wheel                            
+CIR1300TRA089;mid idler d.12                                    
+CIR130INS097R;bv5000 reconditioned sensor for ast - in replaceme
+CIR2300ACC194;riel del modulo superior act7800                  
+CIR2300ACC250;disco finito per encoder sharp (cash              
+CIR2300ACC259;30 pitch encoder disc ø30 (full/empty=4)          
+CIR2300ACC260;30 window encoder disc (ratio=4)                  
+CIR2300ACC263;input pressure device position disc               
+CIR2300ACC270;retaining spring plate for cds fi                 
+CIR2300ACC319;calibration aligner acetate film                  
+CIR2300ACC375;plate                                             
+CIR2300ACC478;calibration sheet for sdm filter group            
+CIR2300ACC485;calibration sheet for sdm filter group            
+CIR2300ACC743;centrifuge cone                                   
+CIR2300ANG308;exit deflector                                    
+CIR2300BOC058;eccentric for cts filter fork mov                 
+CIR2300COM762;"external pc touch sccreen 12"" & printer           "
+CIR2300COM768;"external pc touch sccreen 12"" & printer           "
+CIR2300PER206;pin for input printed eccentrics                  
+CIR2300PER216;eje                                               
+CIR2300PER318;idle pin for flat belts                           
+CIR2300PER323;gear pin for rear module                          
+CIR2300PER473;rotational pin                                    
+CIR2300PER474;pin for coin wast roller                          
+CIR2300PLA004;spiral wheel                                      
+CIR2300PLA177;optical collimator 
+CIR2300PLA178;optical collimator 
+CIR2300PLA188;output shaped belt                                
+CIR2300PLA191;stores in/out rollers brush                       
+CIR2300PLA208;trigger eccentric gumming                         
+CIR2300PLA210;printed output pinching belt                      
+CIR2300PLA213;eccentric gumming (pur) 
+CIR2300PLA215;filter anti-return wheel h=8.5                    
+CIR2300PLA238;sensor input paper holding profile                
+CIR2300PLA240;tgd alingning device upper holding profil         
+CIR2300PLA250;cds 707 external cover                            
+CIR2300PLA253;sensor input paper holding profile ii             
+CIR2300PLA266;prism comb                                        
+CIR2300PLA267;comb with sensor                                  
+CIR2300PLA277;filter anti-return wheel h=8.5 (p                 
+CIR2300PLA281;paper containment profile                         
+CIR2300PLA290;rubber for rear pinching roller 
+CIR2300PLA299;80/30 pitch encoder encoder disk d.34             
+CIR2300PLA328;sdm500/503r openinig input/output (color amarillo 
+CIR2300PLA331;latch holding banknotes for sdm nozzle e          
+CIR2300PLA360;low optical collimator                            
+CIR2300PTT383;rotating plane in metal + rubbered 80sha          
+CIR2300RUL115;z40 m1 gear                                       
+CIR2300RUL140;filter rear pinching roller                       
+CIR2300RUL155;cts aligning device input gummed                  
+CIR2300RUL173;aluminium entry roller                            
+CIR2300RUL181;free rubber roller ø18,5mm                        
+CIR2300RUL187;roller to enter rollers                           
+CIR2300RUL209;retarding roll 2                                  
+CIR2300RUL210;retarding roll 1                                  
+CIR2300RUL211;filter roll 1                                     
+CIR2300RUL212;filter roll 2                                     
+CIR2300RUL215;filter roll 3                                     
+CIR2300RUL217;roller motor transport                            
+CIR2300RUL222;rubber moller contrast filter                     
+CIR2300SAF091;cen iv safe for ast7008 with cencon lock          
+CIR2300STR707;puerta con mecanismos y soporte cerradura x th    
+CIR2300SUP155;aligning device gummed roller support             
+CIR2300TRA051;engrane                                           
+CIR2300TRA080;z20 m1 gear                                       
+CIR2300TRA081;z15 gear                                          
+CIR2300TRA115;z40 m1 gear                                       
+CIR2300TRA144;z40 pulley for gt3 2mgt h=6 belt 
+CIR2300TRA150;z40 pulley for gt3 2mgt belt                      
+CIR2300TRA151;z35 pulley for gt3 2mgt h=3 belt                  
+CIR2300TRA161;z26 m1 gear (hole diam.5)                         
+CIR2300TRA171;diam.15 spiral driving pulley                     
+CIR2300TRA176;z.50 pulley for gt3                               
+CIR2300TRA177;gt3 2mgt z15 pulley                               
+CIR2300TRA178;gt3 2mgt z35 pulley                               
+CIR2300TRA184;pulley z.40 h1 5 gt3 2mgt                         
+CIR2300TRA185;pulley z40 h15 gt3 2mgt                           
+CIR2300TRA214;z25 pulley h=22.6 for gt3 2mgt belt               
+CIR2300TRA256;z25 pulley for gt3 2mgt hole ø6                   
+CIR2300TRA259;pulley z40 h15 gt3 2mgt                           
+CIR3300COM246;cash ray 90 module                                
+CIR3300COM314;5x20 16a fuse                                     
+CIR3300COM322;densitron clutch ec20cw8mm                        
+CIR3300COM341;usb hardware key 
+CIR3300COM376;dynamometer fdp.1000 
+CIR3300COM379;5*20 2at fuse                                     
+CIR3300COM394;57140-000 magnetic actuator                       
+CIR3300COM396;ecf504b-8sk rj45 plug                             
+CIR3300COM398;modulo usb ecf504b                                
+CIR3300COM403;object ds ka 1a                                   
+CIR3300COM435;sd-15b-05 power supply                            
+CIR3300COM437;rsa32/47 wired solenoid                           
+CIR3300COM473;shurter kmf1.1121.11                              
+CIR3300COM478;id isc.ant40/30-a                                 
+CIR3300COM484;portarotollo pcxsp-tg2460h                        
+CIR3300COM500;tf-pfm-945c-a10-01 pc board                       
+CIR3300COM501;tx14d10vm1bpa 
+CIR3300COM510;power supply                                      
+CIR3300COM515;power supply le-hws600-24/dst                     
+CIR3300COM520;zwd225paf-0524/j power supply                     
+CIR3300COM570;shinkon ki1400-aal fork                           
+CIR3300COM593;sp 150power supply                                
+CIR3300COM595;fuente de poder                                   
+CIR3300COM601;abc400-1024cg4 power supply                       
+CIR3300COM609;impresora black usb rs232 ttl 4-7  .5v            
+CIR3300COM612;hard disk sdsa5gk-016g                            
+CIR3300COM726;pc board                                          
+CIR3300COM727;lvds signal cable for arbor pc monitor            
+CIR3300COM731;power supply cable for internal arbor pc          
+CIR3300COM732;com4 serial board for arbor pc (cds/sdm)          
+CIR3300COM733;hdd led cable for arbor pc (cds/sdm vers          
+CIR3300COM763;kr3330-aalf reflection sensor                     
+CIR3300COM765;leb225f-0524/ y cosel power supply
+CIR3300COM772;restoring usb key for windows 7 
+CIR3300COM867;"5,7"" lcd touch screen tx14d28vm5bpa               "
+CIR3300COM868;pantalla                                          
+CIR3300COM889;restoring usb  key (for windows 7)                
+CIR3300MOT015;c.c 24v  1.61 0.65 .466 motor                     
+CIR3300MOT054;motor reducer m.rid.hv 155-2s.24 10/29 wired+two p
+CIR3300SCH192;enc. 2 encoder board                              
+CIR3300SCH203;enc. 4 sensor board                               
+CIR3300SCH219;pressor management end board                      
+CIR3300SCH233;high trigger sensor pulse 
+CIR3300SCH238;master board 7000nt sw boot 4.20                  
+CIR3300SCH239;master board 7000nt (antes 3300sc                 
+CIR3300SCH241;reflection input slot                             
+CIR3300SCH265;cds-707 motherprulhigh board 
+CIR3300SCH270;dewibag r.02 board 
+CIR3300SCH272;motherdeprul board                                
+CIR3300SCH273;master 7000rnr02 with boot cds707                 
+CIR3300SCH318;and sensors board                                 
+CIR3300SCH321;output pocket notes detecdt board                 
+CIR3300SCH342;pulse sensor exit slot  (ex3300sch235)            
+CIR3300SCH345;slave l board                                     
+CIR3300SCH347;manager board                                     
+CIR3300SCH397;scheda cctalk hopper if                           
+CIR3300SCH403;usb switch board                                  
+CIR3300SCH410;cls centrifuge relay board                        
+CIR3300TIL022;gaveta reciclado monedas cds 803                  
+CIR3310CAV030;magnetic sensor cabled 59140 
+CIR3310CAV084;cable for the supply monitor
+CIR3310CAV219;plastic film fork                                 
+CIR3310CAV220;encoder optical fork opb930w51z                   
+CIR3310CAV239;limit switch                                      
+CIR3310CAV558;switch                                            
+CIR3310CAV560;cable rear stocks                                 
+CIR3310CAV563;cable                                             
+CIR3310CAV810;bv5000-motherdeprulhigh board cable               
+CIR3310COM267;hard disk ssd dom 16gb kf bwn-satml1603           
+CIR3310COM268;pc board kf dfi-bdbt50601 2gb ram+16gb s          
+CIR3310COM480;cds803 pelicano module sorter (all currencies)    
+CIR3310COM486;cds-803 pelicano module for chile                 
+CIR3310COM507;hub usb 2.0 4 output                              
+CIR3310COM526;lever set for pelicano modules                    
+CIR3310COM778;"restoring usb key (for windows 7) for 15"" pc      "
+CIR3310COM998;kit v2 pelicano flap set                          
+CIR3320CAV416;coin reject motor cable on cds803 system          
+CIR3320CAV484;10 circuits shielded ffc cable 80cm length same si
+CIR3320CAV931;parche para conexión de cls                       
+CIR4000CIL159;" d=23 ikon lever cylinder; depth 152 np + 3 keys  "
+CIR4300ACC189;rollon guide lfs70-0700 (l=700)                   
+CIR4300ACC229;soporte riel puerta hopper                        
+CIR4300ACC426;082457 300n gas spring                            
+CIR4300ACC510;58650 left and right telescopic guides            
+CIR4300CAV416;motor cinta transportadora                        
+CIR4300COM371;curtain                                           
+CIR4300COM372;bearing and belt                                  
+CIR4300COM373;"validator complete ""-unit""                        "
+CIR4300COM376;layer 3 gear drive                                
+CIR4300COM378;main board                                        
+CIR4300COM391;cls l2 centrifuge_kpl                             
+CIR4300COM398;sorting spiral complete clp-unit                  
+CIR4300COM402;cleaning kit for coin devices                     
+CIR4300COM407;plastic pin                                       
+CIR4300COM432;cs108 relaunch board                              
+CIR4300COM453;base clp rev5                                     
+CIR4300COM473;sensor verde rev 5                                
+CIR4300COM481;motor                                             
+CIR4300CUS008;688 zz nmb/ezo ball bearing                       
+CIR4300CUS009;cojinete                                          
+CIR4300CUS020;"d.6; d.10; h.3mm bushing mf106 zz                 "
+CIR4300GUA011;oring 3043 sylicon                                
+CIR4300SER053;l4100/1 swing bolt lock 
+CIR4300SER073;l4100-1s swing bolt lock with micro cables        
+CIR4300SER093; lock pulse pro 10 users (keypad + swingb         
+CIR4300TRA006;round belt ø2x118                                 
+CIR4300TRA072;round belt d.3*275 
+CIR4300TRA074;round belt d.2*150 
+CIR4300TRA138;belt gt3 2mgt sv.436*6 
+CIR4300TRA139;belt gt3 2mgt sv3412*6 
+CIR4300TRA141;belt gt3 2mgt sv.386*6 
+CIR4300TRA143;belt gt-3 2mgt sv.400*6                           
+CIR4300TRA144;belt gt3 - 2mgt sv.274*6                          
+CIR4300TRA147;belt gt3 - 2mgt sv.332*6                          
+CIR4300TRA149;belt gt-3 2mgt sv.232*6                           
+CIR4300TRA150;round belt ø2 x 157                               
+CIR4300TRA151;belt gt3 - 2mgt sv.816*3                          
+CIR4300TRA154;flat belt 510-h14 
+CIR4300TRA160;belt gt3-2mgt lenght 534 width 18                 
+CIR4300TRA162;round belt d.3*167 
+CIR4300TRA163;round belt d-3*183 
+CIR4300TRA164;belt gt3 2mgt sv.660*3 
+CIR4300TRA166;belt se-n-sbr sv.384 h.14 
+CIR4300TRA167;belt se-n-sbr sv.20 h.14 
+CIR4300TRA168;belt se-n-sbr 457 h.14 
+CIR4300TRA169;belt se-n-sbr sv.655 h.14 
+CIR4300TRA170;gt3 2mgt belt lenght 600 width 6                  
+CIR4300TRA171;gt3 2mgt belt lenght 930 width 6                  
+CIR4300TRA172;belt gt3 2mgt sv.660*6                            
+CIR4300TRA173;gt3-2mgt belt sv 660*6                            
+CIR4300TRA175;belt se-n-sbr 14x290x0.65                         
+CIR4300TRA177;se-n-sbr belt sv.756 h.14                         
+CIR4300TRA178;se-n-sbr belt sv.680 h. 14                        
+CIR4300TRA179;se-n.sbr belt length 332 width 14                 
+CIR4300TRA180;gt3-2mgt belt lenght 502 width 9                  
+CIR4300TRA181;belt gt3 2mgt sv.660 h.11                         
+CIR4300TRA182;round belt d.3 sv.116                             
+CIR4300TRA183;belt gt3 2mgt sv.280 h.6                          
+CIR4300TRA185;se-n-sbr belt length 835 width 14                 
+CIR4300TRA186;se-n-sbr belt length 421 width 14                 
+CIR4300TRA187;se-n-sbr belt length 345 width 14                 
+CIR4300TRA189;se-n-sbr belt length 171 width 14                 
+CIR4300TRA190;se-n-sbr belt length 264 width 14                 
+CIR4300TRA191;se-n-sbr belt length 470 width 14                 
+CIR4300TRA198;se-n-sbr belt length 218 width 14                 
+CIR4300TRA201;flat se-n sbr belt sv.372 h.14                    
+CIR4300TRA203;round belt ø2x85                                  
+CIR4300TRA205;se-n-sbr belt length 290 width 14                 
+CIR4300TRA215;gt3 2mgt sv.274*4 belt                            
+CIR4300TRA226;round belt d.3x127                                
+CIR4300TRA230;t2,5 sv.317,5*18 double-row belt                  
+CIR4300TRA234;pu belt dia t2,5 317, 5x18 60sha                  
+CIR4300TRA236;round belt d.2x97                                 
+CIR4300TRA258;cinta transportadora                              
+CIR4300TRA259;gates belt gt3 2mgt sv.436 h.12                   
+CIR4300TRA266;gt3 2mgt sv.1032*6 belt                           
+CIR4400000033;cable conexion impresora black rs232              
+CIR6906-NR000;"extrenal pc touch screen 15"" & printer            "
+COR0000000KIT;kit repuestos equipo cashio                       
+COR000000G712;power suplly skynet 60 w snp-9069                 
+COR000000J012;ru cj power suply lpq 112                         
+COR000002789;cashio coin hopper rail right                     
+COR00000A3016;caion main power supply 
+COR00000A3017;cover power supply astec lpq112 
+COR00000A6695;spring lock position 
+COR00000C0002;"touch screen 15""                                  "
+COR00000C0010;"cashio touch screen 15""lcd open frame             "
+COR00000C1231;tarjeta operador con banda magnetica              
+COR00000C1232;service card                                      
+COR00000C1233;operator chip card for caion                      
+COR00000C1236;caion printer thermal paper white                 
+COR00000C1237;card reader cleaning cards                        
+COR00000C1240;bateria ups caion 
+COR00000C1241;cable para caion 
+COR00000C1242;cashio coin hopper extension large cone           
+COR00000C1243;cashio coin hopper extension small cone           
+COR00000C1273;motorized card reader sankyo option               
+COR00000C1334;cashio handle for safe door new                   
+COR00000C1514;caion ticket printer option                       
+COR00000C2430;paper roll small for tg2480h                      
+COR00000C2445;cashio main controller countr                     
+COR00000C2447;main controller for cashio                        
+COR00000C2480;cashio printer complete tg2480h                   
+COR00000C2536;cashio keyboard                                   
+COR00000C2676;nmd nt refurb kit                                 
+COR00000C2782;cashio nmd rail left                              
+COR00000C2783;cashio nmd rail right                             
+COR00000C2788;cashio coin hopper rail left                      
+COR00000C2789;cashio coin hopper rail right                     
+COR00000C2869;motherboard caion gigabyte                        
+COR00000C5766;cim motorized card reader                         
+COR00000C8105;caion one time software update license            
+COR00000D9331;shutter nmd100 
+COR00000E2735;nmd nc note cassette controller                   
+COR00000E2825;bill acceptor complette                           
+COR00000E8082;cable wire 4p 220mm ul 26awg bk a 
+COR00000E8086;cable wire 3p 540mm ul 26awg bk a 
+COR00000E8087;nmd cable power to cmc wire 3p                    
+COR00000E8700;nmd bcu arm for locking fingers 
+COR00000E8701;nmd bcu guide fingers for notes 
+COR00000E8715;nmd fr gear 82 teeth for locking                  
+COR00000E8716;nmd fr gear segment for locking c                 
+COR00000E8735;nmd sp back plate 
+COR00000E8774;engranaje de plastico caion 
+COR00000E8780;nmd nc bushing for motor                          
+COR00000E8947;cable wire 7p 250mm ul26awg bk am 
+COR00000E8948;cable wire 3p 610mm ul 22awg bk a 
+COR00000E8953;cable wire 3p 130mm ul 22awg bk a 
+COR00000E8955;cable flat 2p (e8955)                             
+COR00000F1664;nmd cassette motor dc 4v 
+COR00000F1676;motor stepping for moving rv 
+COR00000F2934;nmd-nq-belt synchro gt 2mr-274-04 
+COR00000F2936;belt synchro gt 2mr-252-10 
+COR00000F2937;nmd-nq-belt synchro gt 2mr-318-06 
+COR00000F4284;cutter mechanism set fpt632 
+COR00000F4348;term it / eng tristat bushing 
+COR00000F4351;term it / eng presenter 
+COR00000F4352;term it / eng gear 66 
+COR00000F4354;term it/eng pulley shaft 
+COR00000F4355;term it / eng roller shaft 
+COR00000F4357;term it/ eng large r pulley 
+COR00000F4358;term it/ eng smaller pulley 
+COR00000F4359;te3rm it/eng central roller 
+COR00000F4360;term it/eng lateral roller 
+COR00000F4368;term it / eng spring traction 
+COR00000F4583;slide tt30/40 f=533 a=800 rohs 
+COR00000F5468;hopper / silo small coin 
+COR00000F5469;hopper/silo standar coin 
+COR00000F5974;cable controlador caion                           
+COR00000F6388;card reader ins tr1,2,3 ic rs sankyo              
+COR00000F9528;presenter shaft support 
+COR00000F9530;spring rigth presenter 
+COR00000F9531;spring left presenter 
+COR00000G2161;sensor alarma                                     
+COR00000G2577;cx paper roller printer 
+COR00000G2844;disco duro para caion 160gb 
+COR00000G2895;cashio gas spring for pos upper door 400n         
+COR00000G2982;caion gas spring for locking fingers              
+COR00000G6886;motor impresora                                   
+COR00000G6888;assy therm prt fuji present motor 
+COR00000G7145;serial 8 pci card ex-41098 exsys 
+COR00000G7642;"cx3 ada 15"" frontal panel "
+COR00000G7864;coin guide rail rohs 
+COR00000G8356;plate deflector coin hopper exit 
+COR00000G8387;cable com nmd disp/pc db9 5.1m 
+COR00000G8399;lock medeco med 801                               
+COR00000H1443;caion/cashio sensor board rs232 
+COR00000H3970;cj motherboard vx35a r1.0 amp 
+COR00000H4897;rohs coin dispenser corl rs232 fl 
+COR00000H5310;cx slinding panel 
+COR00000H5314;caion panel dip card reader for upper door        
+COR00000H5737;ups 1500va br 1500 120v apc 
+COR00000H6018;nmd cable 4p 50mm 26awg 6-179228- 
+COR00000H6021;ndm cable 3p 230mm 20awg bkamp 3- 
+COR00000H6064;caion pin pad 6 key encrypt                       
+COR00000I2408;boca de impresora j2408                           
+COR00000I6593;caion cable com coin disp db9 4m 
+COR00000I6612;cable completo ciaon                              
+COR00000I6632;cable mini sensor no aleph assy 
+COR00000I6900;caion printer/cutter/pressenter a 
+COR00000I8428;control impresora térmica                         
+COR00000I8973;nmd presenter front delivery modu 
+COR00000I9142;nmd r8/r9 module presenter rear 
+COR00000J0128;fuente de poder general                           
+COR00000J0378;nmd nd note diverter complete (r8)                
+COR00000J0489;nmd r8/r9 module bundle carriage                  
+COR00000J0491;nmd r8/r9 subset frame assy 
+COR00000J0492;nmd r9 module note qualifier assy                 
+COR00000J0493;nmd r9-module note diverter assy 
+COR00000J0494;nmd r9 module note stacker assy 
+COR00000J0495;nmd r8/r9 note cassete w/keylock                  
+COR00000J0497;nmd r8/r9 reject vault w/ keylock 
+COR00000J0499;nmd r8/r9 subset extension kit 
+COR00000J0506;nmd r9-pcb cmc 200 central machin                 
+COR00000J0509;nmd r8/r9 pcb nfc200 note feeder 
+COR00000J0701;nmd nf note feeder complete (r9)assy              
+COR00000J0722;nmd r8/r9 - module power supply 
+COR00000J0791;nmd r9- module note feeder assy                   
+COR00000J0807;coin hopper connectot set 
+COR00000J2698;flicker led green 12v assy 
+COR00000J2699;sensor stand alone assy 
+COR00000J2700;amp phone + 2x1.2 w-8 ohms assy 
+COR00000J2880;ro assy sens thermal prt paper ne 
+COR00000J2881;ro assy sens thermal prt presente 
+COR00000J2882;ro assy contr thermal prt it fjt 
+COR00000J3584;nmd r8/r9 module bundle output lo 
+COR00000J4019;minter tray rohs                                  
+COR00000J4100;tower light stc rgw standard assy 
+COR00000J5661;safety device rs232 assy 
+COR00000J7589;ro term it / eng sub assembly pre 
+COR00000K0059;cable shutter cash dispencer 5,5m 
+COR00000K0170;cable dc coin dispenser 3.0m mm/t 
+COR00000K1158;caion hopper chain 16-21mm ( green )              
+COR00000K1159;caion hopper chain 21-30 mm (red)                 
+COR00000K1160;dip card reader icm300                            
+COR00000K1165;caion dip card reader bezel                       
+COR00000K1458;note dispenser nmd-100 r9tr4n con 
+COR00000K1500;cim capture module complete                       
+COR00000K1900;caion ticket printer option 
+COR00000K2361;cim read/write unit encoder                       
+COR00000K2379;ass’y ic connector cable                          
+COR00000K2602;cim read/write sensor cover                       
+COR00000k3009;caion shutter repair kit 
+COR00000K3506;cim com cable from main board to read/write       
+COR00000K3674;cim read/write unit for mag and i                 
+COR00000K3801;cim main board revision e                         
+COR00000K3820;cim read/write unit ic-contact module             
+COR00000K3821;cim read/write unit solenoid for ic-contact       
+COR00000K3830;assy sensor board                                 
+COR00000K3904;cim shutter complete                              
+COR00000K3905;cim shutter assy bezel and switch                 
+COR00000K3906;cim shutter assy bezel                            
+COR00000K4711;kit soporte card reader (trasera)                 
+COR00000M0056;motherboard st 4253 
+COR00000M2481;cashlo coin hopper 0.05 us$                       
+COR00000M2487;hopper controller                                 
+COR00000M2509;cashio coin hopper extension                      
+COR00000M2733;cashio coin hopper monedas de 10 pesos            
+COR00000M2734;cashio coin hopper monedas de 50                  
+COR00000M2736;cashio coin hopper monedas de 500                 
+COR00000P1100;preventive mainteneance kit mot cardb reader      
+COR00000P1101;cim no.3 whole kit for fitting for new card read/w
+COR00000P2505;power supply 24v                                  
+COR00000P2506;power supply 12                                   
+COR00000P2507;power supply 5v                                   
+COR00000P2508;power supply 36v                                  
+COR00000R1842;thermal printer controller assy                   
+COR00000RH489;caion hopper controller ,coin dispenser           
+COR00000T2315;nmd bou gable right for bou 
+COR00000T2316;nmd bou gable left for bou 
+COR00000T2317;nmd presenter sideplate left 
+COR00000T2318;nmd presenter sideplate right 
+COR00000T2425;nm50 complete dispenser                           
+COR00000T2450;extension te38 for nmd 50e                        
+COR00000T2453;pick up assembly (rev300) note feeder             
+COR00000T2489;reject box                                        
+COR00000T2510;nmd bou flat cable to cmc                         
+COR00000T2527;nmd50 central machine controller cmc050           
+COR00000T2552;nmd 50transport unit                              
+COR00000T2821;nmd nf note fedeer complete (nf300)               
+COR00000T2876;nmd nq note qualifier complete (nq300)            
+COR000PCCAION;caion pc                                          
+COR000RO52205;patr tt38-608x72 telescopic rail , rohs           
+COR000ROF4282;head thermal printer fuji                         
+COR0067F16760;motor stepping formoving rv                       
+COR0070010018;card base - a 
+COR0074120004;roller 
+COR007412002;roller 2
+COR0074120025;idler roller 
+COR0074210001;pulley - a 
+COR0074210002;pulley 
+COR0074210008;feeding pulley 
+COR0074210009;main pulley 
+COR0074250001;belt 
+COR0074250006;belt 
+COR0074250007;belt 
+COR0074250014;belt 97mxl 
+COR0074250015;belt 112mxl 
+COR0074250016;belt 120mxl 
+COR0078930002;pcb cover 
+COR0089000034;assy head brkt 
+COR0089100023;assy mid shaft 
+COR0089100061;assy shaft a 
+COR0089100062;assy shaft b 
+COR0089100063;assy shaft c 
+COR0089100077;assy shaft - a 
+COR0089100078;assy shaft - b 
+COR0089100079;assy shaft - c 
+COR0089100084;feeding shaft b 
+COR0089100085;assy idler shaft 
+COR0089100087;assy card base 
+COR0089203600;assy ttl pcb 
+COR0089203901;assy main pcb 
+COR0089251122;assy sensor board 
+COR0089262100;geard motor 
+COR0089400027;assy dc motor 
+COR00G8400005;llave caion                                       
+COR00IM1274JR;card issuing machine for magnetic 
+COR025HDPELG1; corte hdpe 1mm liso gm13 7 x 25 m (un octavo de r
+COR025HDPELN1;corte hdpe 1mm liso nominal 7 x 25 m (un octavo   
+COR025HDPELN2;corte hdpe 2mm liso nominal 7 x 25 m (un octavo de
+COR050HDPELG1;corte hdpe 1mm liso gm13 7 x 50 m (un cuarto de ro
+COR050HDPELN1;corte hdpe 1mm liso nominal 7 x 50 m (un cuarto   
+COR050HDPELN2;corte hdpe 2mm liso nominal 7 x 50 m (un cuarto de
+COR0891000330;assy shutter 
+COR0902178001;maquina multifuncional caion 220v 
+COR0ARTCLIENT;software administracion countr clientes           
+COR0ARTSERVER;software administracion countr                    
+COR100HDPELG1; corte hdpe 1mm liso gm13 7 x 100 m (medio rollo) 
+COR100HDPELN1;corte hdpe 1mm liso nominal 7 x 100 m (medio ro   
+COR100HDPLN15;corte hdpe 1,5mm liso nominal 7 x 100 m (medio rol
+COR150HDPELN1;corte hdpe 1mm liso nominal 7 x 150 m (3/4 de roll
+COR25HDPELG15; corte hdpe 1,5mm liso gm13 7 x 25 m (un octavo de
+COR25HDPELN15;corte hdpe 1,5mm liso nominal 7 x 25 m (un octavo 
+COR50HDPELN15;corte hdpe 1,5mm liso nominal 7 x 50 m (un cuarto 
+COR7000010019;card base - b 
+CTR0000007545;impresora externa 
+CTR0020081230;sensor assembly                                   
+CTR0020750030;coin wheel assembly, coin pickup system           
+CTR0031801830;center disc - inlay                               
+CTR0033801750;center disc, coin pickup system                   
+CTR0753130103;cajon de los tubos de moneda                      
+CTR0753440004;cable para i mpresora externa 
+GDR0000100012;threaded plate 
+GDR0000101451;buffer assembly                                   
+GDR0000106655;seguros                                           
+GDR0000106664;retaining washer                                  
+GDR0000113710;shim washer din 988, 8x14x0,1 
+GDR0000141774;fuse (4a) 
+GDR0000144483;fusible tr5 - t                                   
+GDR0000144830;fuse (1a) 
+GDR0000151168;transport belt (l=325) 
+GDR0000153694;prism 
+GDR0000153749;gate drive assembly 
+GDR0000154694;lifting solenoid 
+GDR0000155891;ppd cover 
+GDR0000155892;ppd frame 
+GDR0000214380;engrane roller                                    
+GDR0000218838;spring                                            
+GDR0000221631;tray                                              
+GDR0000224386;mounting kpl                                      
+GDR0000247255;guide element                                     
+GDR0000252175;goma de empuje                                    
+GDR0000266703;tambor                                            
+GDR0000275854;polymer retarding  (ex260197)                     
+GDR0000278976;bushing, sensor unit 
+GDR0000281463;frequency converter unit 550w                     
+GDR0000625.ZZ;rodamiento 625 5x16x5                             
+GDR0000HK0306;rodamiento tapa numeron 
+GDR0005128590;power supply bps c2                               
+GDR00225815R0;replacement sensor unit bps 200 
+GDR00SETFUSES;set fuses                                         
+GDR0106083000;deep-groove ball bearing 
+GDR0106662000;retaining washer 4 mm 
+GDR0106677000;cup spring 
+GDR0110513000;time lag fuse 10a/250v 
+GDR0112030000;retaining ring 13 mm 
+GDR0123538000;straight pin 
+GDR0124290000;fine-wire fuse 3.15 a 230 v, slow 
+GDR0130451000;warning label “hazardous voltage” 
+GDR0137763000;"warning label ""rotating drums"" "
+GDR0146621000;belt roller d=40.1 mm sensor sect 
+GDR0146802021;belt roller d=40.1 mm transport s 
+GDR0146846000;idle pulley d=28 mm 
+GDR0153674001;stacking wheel 
+GDR0153685021;bearing mount stacker collecting 
+GDR0153980011;guide roller x1 assembly d=79.5 
+GDR0154521000;stacking wheel reject stacker 
+GDR0154628000;picker frame bottom assembly 
+GDR0154642000;picker frame top assembly 
+GDR0154710000;shaft d 
+GDR0154713000;lt pulley assembly 
+GDR0155195000;speaker assembly. 
+GDR0155242001;drive roller b1/hr assembly d=40, 
+GDR0157607001;guide roller g3 assembly d=40,1 
+GDR0157623000;warning label “max. thread exposu 
+GDR0157703000;roll 
+GDR0158336021;cable x84 - x86                                   
+GDR0158683061;ring with bearing singler drum, i 
+GDR0158684061;singler drum, idler pulleys, step 
+GDR0158684071;singler drum, idler pulleys, step 
+GDR0158832031;angle drive deflection 
+GDR0158853011;roller sensor unit 
+GDR0159166001;panel element fsm 
+GDR0159170001;delivery flap, top 
+GDR0159171001;delivery flap, bottom 
+GDR0159386021;roller d=46 
+GDR0159598041;guide roller d=30 round belt tran 
+GDR0159600021;guide roller d=30 round belt tran 
+GDR0159600041;guide roller d=30 round belt tran 
+GDR0159666021;friction roller 
+GDR0159694011;toothed belt wheel sensor unit wi 
+GDR0159891031;guide plate with bearing 
+GDR0159892000;idler pulley 
+GDR0160072000;fastening bolt 
+GDR0174264011;round belt l=236 mm 
+GDR0176101000;bander paper 
+GDR0186107000;slow-blow fine-wire fuse, 5x20mm, 
+GDR0186250000;thermo paper roll 
+GDR0186402000;pressure switch emergency stop/ d 
+GDR0188512000;ball bearing 12x28x8 mm 
+GDR0189425000;fuse fast blow 1a/32v 
+GDR0190722000;retaining washer as 5 retarding u 
+GDR0190726000;ball bearing 4x13x5 mm 
+GDR0190727000;ball bearing flat belt transport 
+GDR0190728000;deep-groove ball bearing 686 
+GDR0190903000;deep-groove ball bearing 8x22 
+GDR0191246000;cam angle 
+GDR0191555000;display color lcd tft 
+GDR0191912000;fast-blow subminiature fuse link, 
+GDR0192399000;pressure switch mt42 operating pa 
+GDR0192697000;retaining washer as 3 
+GDR0192851000;bearing mcm-08-02 
+GDR0193138000;stepper motor 
+GDR0200057031;cross support (with pinch roller) 
+GDR0200177000;toothed belt sensor unit 
+GDR0200195031;toothed belt wheel assy coupling 
+GDR0200346000;mdc4 circuit board 
+GDR0200410001;round belt short edge transport i 
+GDR0200525021;pinch roller 
+GDR0200589000;tension spring 10,0 
+GDR0200620000;fastener 
+GDR0200897000;delivery module hinge 
+GDR0200938001;spring switch                                     
+GDR0200985011;idler pulley with bearing band gu 
+GDR0200988011;idler pulley with bearing singler 
+GDR0201115000;super-torque toothed belt, l=2100 
+GDR0201116000;super-torque toothed belt, l=396, 
+GDR0201130000;drive roller, right 
+GDR0201131011;drive pulley with shaft 
+GDR0201139011;drive roller reject stacker 
+GDR0201140041;drive roller, left 
+GDR0201533000;bearing bushing 
+GDR0201565000;belt pulley 
+GDR0201662000;operating unit circuit board 
+GDR0201832001;roller cover sensor unit 
+GDR0202221000;lan connection circuit board 
+GDR0202223011;sdm delivery compartment display 
+GDR0202350000;bearing mcm-10-02 
+GDR0202503000;backplane circuit board 
+GDR0202527000;straight pin sensor unit 
+GDR0202608000;combi-equipment plug, g-si suppor 
+GDR0202610000;drawer for fuse holder 
+GDR0202706001;toothed belt wheel 31 mxl 
+GDR0202742000;stepper motor (complete) 
+GDR0202765011;photo detector circuit board (sta 
+GDR0202842001;stepper motor nmb-23km-c706 
+GDR0202908000;pneumatic spring with double-side 
+GDR0202927021;reflective foil (singler compartm 
+GDR0202960000;mirror reflex detector s=3m 
+GDR0203068000;o-ring nbr 156 
+GDR0203139031;idler pulley d=44 
+GDR0203164031;toothed belt wheel 28/ 46 (60 hz) 
+GDR0203165021;toothed belt wheel 34/ 46 (50 hz) 
+GDR0203165051;toothed belt wheel 34/46 (50hz)                   
+GDR0203169011;toothed belt wheel 35 (50 hz) 
+GDR0203170001;toothed belt wheel 29 (60 hz) 
+GDR0203171011;toothed belt wheel 46 
+GDR0203172011;toothed belt wheel 34 
+GDR0203173011;toothed belt wheel 28 
+GDR0203174001;toothed belt wheel 36 
+GDR0203211000;micro-switch 
+GDR0203213000;print relay 
+GDR0203216000;timing disk 
+GDR0203249000;spring sheet 
+GDR0203267000;toothed belt 1224 mxl 
+GDR0203268000;toothed belt 1360 mxl 
+GDR0203269000;toothed belts 
+GDR0203270000;toothed belt 
+GDR0203274021;toothed belt wheel 34/46 
+GDR0203299011;toothed belt deflection m8 
+GDR0203300021;anchor part 
+GDR0203318001;roller station 
+GDR0203319001;roller station half 
+GDR0203325001;spring, tension roller 
+GDR0203330000;anchor part coupling 
+GDR0203359001;magnet coupling 
+GDR0203378000;o-ring nbr 872 round belt transpo 
+GDR0203379000;super-torque toothed belt, l=288, 
+GDR0203381000;flat belt transport basis module 
+GDR0203382000;flat belt for machines with two d 
+GDR0203383000;flat belt for machines with three 
+GDR0203404011;toothed belt wheel 68 mxl 
+GDR0203417000;mat generator circuit board 
+GDR0203457011;transport shaft 50 up to sdm 2007 
+GDR0203458011;transport shaft 74 up to sdm 2007 
+GDR0203513001;axle pin cover 
+GDR0203514031;transmission shaft delivery unit 
+GDR0203525000;tension roller roller bracket top 
+GDR0203585011;idler pulley d=40, left 
+GDR0203586011;idler pulley d=40, right 
+GDR0203593001;idler pulley d=30 
+GDR0203788001;diversion with axle, bearing and 
+GDR0203821021;feed-in (to delivery module) 
+GDR0203826011;toothed belt tensioner 2 
+GDR0203830000;sdm stepper motor 
+GDR0204678000;super-torque toothed belt, l=699, 
+GDR0204682000;gate vane 
+GDR0205084000;pressure spring vd173f 
+GDR0205086000;pressure spring vd150b 
+GDR0205111051;roller cage 
+GDR0205128000;o-ring nbr 872 retarding assembly 
+GDR0205311000;torque support 
+GDR0205373001;set of round belts 
+GDR0205382000;guide roller with bearing d=21,65 
+GDR0205383011;set of rollers a=54.3 
+GDR0205399000;guide roller delivery unit i 
+GDR0205440001;felt round belt transport with li 
+GDR0205469021;felt - punched 
+GDR0205470031;felt 
+GDR0205565000;set of sealings 
+GDR0205574011;set of rollers a=45 (in lowest st 
+GDR0205617021;sensor unit 
+GDR0205649000;short edge clamp 
+GDR0205656011;spring sheet short edge transport 
+GDR0206152001;transport roller sensor unit with 
+GDR0206820000;toothed belt 1880 mxl 
+GDR0207301000;swiveling roller with bearing 
+GDR0207410000;idler pulley delivery unit ii 
+GDR0207424000;toothed belt wheel 15 
+GDR0207464031;power supply unit psp with pfc 
+GDR0207467000;filter cartridge c75 
+GDR0207505011;shaft with bearing (upgrade neces 
+GDR0207542000;picker belt carrier (with belt pu 
+GDR0207691001;singler friction band (red) 
+GDR0207692000;singler suction band (l=780mm) 
+GDR0207695021;plate spring, 0.3mm 
+GDR0207951001;window 
+GDR0207999000;stripper (retarding unit) 
+GDR0208093000;guide roller limpness sensor (opt 
+GDR0208149011;deflection axis 
+GDR0208181000;bearing mcm-04-02 
+GDR0208324011;cam initiator 
+GDR0208562000;tension spring rz-088x 
+GDR0208644000;fastener 
+GDR0208956000;belt wheel stacking wheel and bel 
+GDR0208957000;belt wheel reject stacker for suc 
+GDR0209098000;gate vane flat belt transport bas 
+GDR0209101000;o-ring nbr 872 stacking wheel and 
+GDR0209107000;guide roller for machines with li 
+GDR0209113000;presser roller wearing plate, air 
+GDR0209144000;suction nozzle piece 
+GDR0209215061;bearing plate li kpl                              
+GDR0209322021;bearing plate re kpl                              
+GDR0209332000;air-supported stripper 
+GDR0209353000;lifting tool 
+GDR0209376021;adjustment gauge singler rocker 
+GDR0209421011;tappet 
+GDR0209424021;strip(s) l=93 mm 
+GDR0209430001;set of round belts ticket reading 
+GDR0209701000;rubber gasket 
+GDR0210016011;driver short edge transport i 
+GDR0210148011;wearing plate rocker, fiber-optic 
+GDR0210180000;coupling 
+GDR0210181000;wearing plate, right 
+GDR0210182000;wearing plate, left 
+GDR0210363011;spring, left 
+GDR0210364011;spring, right 
+GDR0210740001;test media limpness sensor 
+GDR0210797000;slow-blow fine wire fuse, 8a 120 
+GDR0211220000;htd toothed belt 
+GDR0211652001;spring scale 
+GDR0211842001;rodamiento bps                                    
+GDR0211854000;basis module hinge 
+GDR0211959001;banknote storage boxes, wide 
+GDR0211960001;banknote storage boxes, narrow 
+GDR0212121000;singler drum assembly 
+GDR0212188000;belt pulley assembly 
+GDR0212214000;ring with bearing rocker 
+GDR0212775001;skid guide sheet, right 
+GDR0212776000;skid guide sheet, left 
+GDR0212777011;turning skid fk 5mm 
+GDR0212778000;turning skid fk 3mm 
+GDR0212825011;rocker tray liner 
+GDR0212879000;rocker tray rocker, fiber-optic a 
+GDR0213130011;map circuit board 
+GDR0213363000;skid guide sheet 
+GDR0213409000;toothed belt 2976 mxl 
+GDR0213508001;bushing bearing                                   
+GDR0213517031;bearing plate re kpl                              
+GDR0213520041;bearing plate li kpl                              
+GDR0214210000;super-torque toothed belt, l=387, 
+GDR0214262000;suction nozzle insert 
+GDR0214330000;plate spring for machines with su 
+GDR0214380011;gear                                              
+GDR0214398001;torsions spring 
+GDR0214400000;gear unit c=80, m=0.7 
+GDR0214418000;toothed belt l=104 mm 
+GDR0214419000;toothed belt l=112 mm                             
+GDR0214422000;toothed belt l=130 mm                             
+GDR0214423000;toothed belt l=140 mm 
+GDR0214424000;toothed belt l=148 mm 
+GDR0214425000;toothed belt l=184 mm 
+GDR0214591000;pressure spring 4,32 
+GDR0214601021;drive motor eci-24_80 
+GDR0214626000;axle 
+GDR0214636011;ring 
+GDR0214637011;lateral edge guide right 
+GDR0214638011;lateral edge guide left 
+GDR0214650011;spacer ring 
+GDR0214657021;bearing casing forwarding and hop 
+GDR0214658011;bearing casing basis module (2) 
+GDR0214661021;transport roller 3r ml 
+GDR0214661R00;transport roller 3r ml, stacker m 
+GDR0214662000;drive roller 3r ml mzrad 
+GDR0214663021;rodillo guía 
+GDR0214663R00;drive roller, basis module (2)nat 
+GDR0214664021;drive roller 4r ml 
+GDR0214666021;bearing casing 1, large 
+GDR0214667021;bearing casing 2, large 
+GDR0214668000;bn collecting plate 1 
+GDR0214678011;clip 
+GDR0214679001;side-rod (gate) 
+GDR0214714000;forked photo detector 
+GDR0214718000;toggle switch 
+GDR0214730051;circuit board pdm-si 
+GDR0214731000;circuit board aapdm 
+GDR0214734051;circuit board aapd 
+GDR0214738011;photo detector si0 
+GDR0214765021;power supply unit / motor control                 
+GDR0214794011;gate vane assy 
+GDR0214875011;transport roller 4r ml 
+GDR0214875R00;transport roller 4r ml, sensor mo 
+GDR0214876011;transport roller 7r 
+GDR0214876R00;transport roller 7r, stacker modu 
+GDR0214877011;transport roller 4r 
+GDR0214877R00;transport roller 4r, upper drive 
+GDR0214878031;transport roller 3r 
+GDR0214878R00;transport roller 3r, basis module 
+GDR0214959000;shoulder screw, sensor module 
+GDR0215021011;drive roller 
+GDR0215021R00;drive roller, spare parts nationa 
+GDR0215022031;transport roller 3r 
+GDR0215022R00;transport roller 3r, spare parts 
+GDR0215055011;lever (gate) 
+GDR0215056021;bearing 
+GDR0215192011;window with adhesive frame 
+GDR0215199021;support 
+GDR0215390001;friction coating 44x25x1.5 mm 
+GDR0215439000;guide element 
+GDR0215512000;valve 
+GDR0215971000;pentium p6 cpu 
+GDR0216211031;drive roller 
+GDR0216244041;proximity switch mounting 
+GDR0217221000;rocker tray 
+GDR0218224000;board roller 
+GDR0218848001;sliding block 
+GDR0218857011;friction element 1 
+GDR0218876001;torque support 
+GDR0218895000;plate spring 
+GDR0218897001;spring 
+GDR0218929001;slide bushing 
+GDR0218938000;external keypad 
+GDR0219022000;pc mouse ps3 
+GDR0219106000;flat belt                                         
+GDR0219196001;lever, right 
+GDR0219197001;lever, left 
+GDR0219376000;singler friction band 
+GDR0219478001;side panel, left 
+GDR0219506001;deflection roller assy 
+GDR0219508001;gear unit c=90/20, m=0.7 
+GDR0219509001;gear unit c=80 m=0.7 assy 
+GDR0219510021;lever 
+GDR0219511011;stacker shaft 
+GDR0219512021;pinch roller 
+GDR0219513021;shaft ve assy. 
+GDR0220591000;stamped part (double-sided tape) 
+GDR0220843001;roller with bearing 
+GDR0221028011;axle 
+GDR0221029021;rotor 
+GDR0221213000;bim_ibq cable 
+GDR0221382000;shackle 
+GDR0221400001;cover, stacker module 
+GDR0221608001;toothed belt wheel 
+GDR0221624021;bearing housing right assy 
+GDR0221629000;cover 
+GDR0221630000;cover, stacker module (1) 
+GDR0221704000;prism                                             
+GDR0221811021;bearing housing 
+GDR0222017001;guide element, top 
+GDR0222018001;guide element, bottom 
+GDR0222290011;bearing mount, right 
+GDR0222291001;bearing mount, left 
+GDR0222328031;shaft assy. 
+GDR0222642000;toothed belt l=216 mm                             
+GDR0222643000;toothed belt l=575 mm 
+GDR0222717001;wheel                                             
+GDR0222766011;solenoid holder assy 
+GDR0222805000;silencer 
+GDR0222808000;vibration isolator 
+GDR0222809000;housing grip (not shown) 
+GDR0222810000;control valve 
+GDR0222813000;manometer 
+GDR0222814000;relay 
+GDR0222815000;silicon hose 
+GDR0222872000;sleeve 
+GDR0222971000;guide element                                     
+GDR0223100000;singler suction band 
+GDR0223593031;sensor cashray 180 f 
+GDR0223635000;guide element 
+GDR0223637000;cable harness assy 
+GDR0223673001;banknote collecting plate 2 assy. 
+GDR0224516011;plate 
+GDR0224612011;support 
+GDR0224613011;lever assy 
+GDR0224686000;cable harness assy 
+GDR0224957001;round belt 
+GDR0225057000;tension spring 
+GDR0225058000;tension spring sensor module 
+GDR0225099000;patch cable l=670, yellow 
+GDR0225103001;lifting solenoid 24v 
+GDR0226370000;banknote collecting plate 1 assy. 
+GDR0226370021;banknote collecting plate 1 assy                  
+GDR0226468001;continuous loop 
+GDR0229819000;fast-blow fine-wire fuse, 10a, 25 
+GDR0235610001;cam axle 
+GDR0236330000;bearing mount 
+GDR0236694000;shoulder screw 
+GDR0237984001;reflective foil (reject stacker) 
+GDR0238718001;toothed belt set l=216 mm 
+GDR0238719001;toothed belt set l=368 mm                         
+GDR0238720021;"spare part packet ""coupling set"" "
+GDR0238721001;spare parts packet friction segme 
+GDR0238908031;spare parts packet retarding whee 
+GDR0239119001;"retrofit kit ""hinges"" "
+GDR0239358000;ball bearing, 6x13x5 
+GDR0239362000;ball bearing 
+GDR0239419011;cover reject compartment 
+GDR0239804000;retaining ring din 471-6x0.7 
+GDR0239805000;retaining ring din 471-8x0.8 
+GDR0239863001;motor board 230v, 50/60hz 
+GDR0240311001;gate vane 2 assembly 
+GDR0240440000;proximity switch, stepper motor a 
+GDR0242174000;middle disk, delivery unit, rear 
+GDR0242786000;toothed belt wheel mat generator 
+GDR0242932001;side plate, paneling 
+GDR0244647000;shaft with bearing 
+GDR0244805001;safety switch 
+GDR0245249000;limpness sensor lps 
+GDR0246229000;toothed belt l=100 mm 
+GDR0246230000;toothed belt l=118 mm 
+GDR0246232000;toothed belt l=124 mm 
+GDR0247852000;ppc circuit board 
+GDR0250068021;fiber optic vorm rve                              
+GDR0250578000;felt dis-hr 
+GDR0252175001;spare parts packet hopper 
+GDR0252176001;spare parts packet advance 
+GDR0253438000;axle, retarding unit 
+GDR0255917011;patch cable l=640, blue 
+GDR0256151011;circuit board ppdi1 
+GDR0256165021;circuit board ppdi2 
+GDR0258678011;repair set for basis module cover 
+GDR0259855001;shaft, complete machine 
+GDR0260195011;drum slings polymer ( gdr0260195011)              
+GDR0260195041;set of friction elements ’ve-polymer’             
+GDR0261017000;mirror reflex detector 
+GDR0261418000;circuit board chc-n 
+GDR0264393001;light unit, round belt transport 
+GDR0265223001;cable camara tickets                              
+GDR0265352001;camera (with lens) 
+GDR0265583021;personal machine interface pmi-ng 
+GDR0265584001;upper housing 
+GDR0265588001;flap, personal machine interface 
+GDR0265589001;lid, personal machine interface p 
+GDR0265592001;frame 
+GDR0265594001;cover, personal machine interface 
+GDR0265628001;"spare part packet ""retarding unit "
+GDR0266699001;gasket 
+GDR0266701001;frame, personal machine interface 
+GDR0266703001;"spare part package ""ve ploymer""                   "
+GDR0266729001;"repair set ""display"" "
+GDR0266730001;connection cable (l=1.5m) 
+GDR0266731001;"repair set ""usb"" "
+GDR0266732001;circuit board 
+GDR0266868000;buffer 
+GDR0266921001;"retrofit kit ""singler"" "
+GDR0270025001;"spare parts packet ""lower housing "
+GDR0270039001;"spare parts packet ""printer"" "
+GDR0270768000;ball bearing 6x19x6 
+GDR0271878001;transport belt, flat belt transpo 
+GDR0271888001;transport shaft 50 
+GDR0271889001;transport shaft 74 
+GDR0271890001;bushing 
+GDR0272072011;retrofit kit, dm 
+GDR0275001001;cable x099                                        
+GDR0275450000;optical sensor, friction band sin 
+GDR0275869000;pressure switch bps                               
+GDR0276258001;delivery flap sdm ob                              
+GDR0278310000;toothed belt, drive: motor unit, 
+GDR0278389001;reflectante bps                                   
+GDR0281852011;toothed belt tensioner bas 2                      
+GDR0283913000;toothed belt              192/6mm                 
+GDR0283918000;toothed belt              300/6mm                 
+GDR0283950011;transport roller a                                
+GDR0283951001;transport roller b                                
+GDR0285227001;toothed belt wheel        assy                    
+GDR0285303011;holder                                            
+GDR0285899001;ang. incremental encoder  motor                   
+GDR0285932011;shaft                                             
+GDR0285997001;toothed belt wheel        s3mx43t                 
+GDR0286339001;circuit board ppc2-montiert                       
+GDR0500728001;frequency converter                               
+GDR0503437011;circuit board             c1-f-com                
+GDR0503438021;circuit board             c1-f-bld                
+GDR0503450011;circuit board             c1-f-bsp                
+GDR0503451011;circuit board              c1-f-bcd               
+GDR0503452011;circuit board             c1-f-bme                
+GDR0503453011;circuit board             c1-f-rji                
+GDR0503455011;circuit board              c1-f-bpw               
+GDR0503460001;circuit board             c1-f-ste                
+GDR0503497001;pressure roller                                   
+GDR0503499001;drive roller 18x4                                 
+GDR0503500001;drive roller mr                                   
+GDR0503501001;drive roller mg                                   
+GDR0503502001;drive roller 43x2                                 
+GDR0503504001;transport roller 29mm                             
+GDR0503505001;transport roller 48,5mm                           
+GDR0503506001;transport roller 91,5mm                           
+GDR0503507011;toothed belt wheel        s3mx18t                 
+GDR0503508001;toothed belt wheel        o s3mx18tx5             
+GDR0503509011;toothed belt wheel        d s3mx18tx8             
+GDR0503510011;toothed belt wheel        d s3mx48tx8             
+GDR0503514000;fiber optic ld02-01                               
+GDR0503515000;toothed belt              171-3mx5                
+GDR0503516000;toothed belt              207-3mx5                
+GDR0503517000;toothed belt              153-s3mx6               
+GDR0503518000;toothed belt              177-s3mx5               
+GDR0503519000;toothed belt              189-s3mx6               
+GDR0503520000;toothed belt              228-s3mx5               
+GDR0503526001;mounting c1-f                                     
+GDR0503527001;singler c1-f                                      
+GDR0503530021;circuit board pw-sw                               
+GDR0503553021;thickness sensor c1-f (set)                       
+GDR0503554001;image sensor                                      
+GDR0503560001;connection, electrical    c1-f                    
+GDR0503562001;motor nc6000                                      
+GDR0503563001;solenoid switch           rsa32/47                
+GDR0503564021;power supply unit wp513f13-2412                   
+GDR0505009001;calibration paper                                 
+GDR0505027001;calibration set                                   
+GDR0510327001;cable harness j18-ui to fft                       
+GDR0514880001;prism bps c1                                      
+GDR0515766001;holder kpl                                        
+GDR214662R000;drive roller 3r ml mzrad national (gdr0214662r000)
+GDR503459001;circuit board c1-f-ui                             
+GDR503522001; ribbon cable p2-lo cis->cis                      
+GDR503524000;ribbon cable p4-mt0 -> mt1                        
+GDR505439000;toothed belt 168-3mx5                             
+GDR513866001;handle kpl                                        
+GYD0000278295;pantalla táctil modelo bps c4                     
+GYD0283802001;tarjeta map 2 bps c4                              
+GYD0503444001;"pcba: bps c1-f mt1 board	tarjeta 1                "
+GYD0503445001;"pcba: bps c1-f mt0 board	tarjeta 2                "
