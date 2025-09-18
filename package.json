@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +21,8 @@
     "node-cron": "^4.2.1",
     "nodemailer": "^7.0.5",
     "pdfkit": "^0.17.1"
+  },
+   "engines": {
+    "node": ">=18.0.0"
   }
 }
