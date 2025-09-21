@@ -39,7 +39,24 @@ const usoSchema = new mongoose.Schema({
   fecha: {
     type: Date,
     default: Date.now
-  }
+  },
+  tipoConsumo: {
+    type: String,
+    required: true,
+    enum: ['Consumo', 'Facturable'],
+    default: 'Consumo'
+  },
+  enviadoManual: {
+    type: Boolean,
+    default: false
+  },
+  fechaEnvioManual: {
+    type: Date
+  },
+  enviadoAutomatico: {
+    type: Boolean,
+    default: false
+  } 
 }, {
   timestamps: true
 });

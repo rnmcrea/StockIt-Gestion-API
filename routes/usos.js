@@ -45,6 +45,7 @@ router.post('/', autenticar, async (req, res) => {
       cliente: cliente.trim(),
       cantidad: parseInt(cantidad),
       usuario: usuario,
+      tipoConsumo: req.body.tipoConsumo || 'Consumo',
       fecha: new Date()
     });
 

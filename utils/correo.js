@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
@@ -25,77 +26,215 @@ transporter.verify((error, success) => {
   }
 });
 
-async function enviarCorreo(destinatario, asunto, cuerpo, archivoPdf, copias = []) {
+async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, copias = []) {
   try {
-    // Configuración mejorada del correo
+    console.log("📤 Preparando envío de correo...");
+    console.log("   📧 Para:", destinatario);
+    if (copias.length > 0) {
+      console.log("   📋 Copias:", copias.join(', '));
+    }
+    console.log("   📋 Asunto:", asunto);
+
+    // Configuración base del correo
     const mailOptions = {
       from: {
-        name: 'StockApp Sistema',
-        address: process.env.EMAIL_FROM
+        name: 'StockIt Sistema',
+        address: process.env.EMAIL_FROM || process.env.EMAIL_USER
       },
       to: destinatario,
-      cc: copias.length > 0 ? copias.join(', ') : undefined, // Agregar copias
+      cc: copias.length > 0 ? copias.join(', ') : undefined,
       subject: asunto,
       text: cuerpo,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #2196F3; text-align: center;">📊 StockApp - Reporte</h2>
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
-            <p style="color: #333;">Estimado usuario,</p>
-            <p style="color: #333;">Adjunto encontrarás el reporte solicitado.</p>
-            <pre style="background-color: white; padding: 15px; border-left: 4px solid #2196F3; overflow-x: auto;">${cuerpo}</pre>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
+            <h2 style="color: white; margin: 0; font-size: 24px;">StockIt - Reporte</h2>
           </div>
-          <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
-          <p style="color: #666; font-size: 12px; text-align: center;">
-            Este es un mensaje automático de StockApp. No responder a este correo.
-          </p>
+          <div style="background-color: #f9f9f9; padding: 25px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
+            <p style="color: #333; font-size: 16px; margin-bottom: 20px;">Estimado usuario,</p>
+            <p style="color: #333; margin-bottom: 20px;">Adjunto encontrarás el reporte solicitado desde StockIt.</p>
+            <div style="background-color: white; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; margin: 20px 0;">
+              <pre style="margin: 0; white-space: pre-wrap; font-family: 'Courier New', monospace; font-size: 13px; color: #444; overflow-x: auto;">${cuerpo}</pre>
+            </div>
+            ${rutaArchivo ? `
+            <div style="background-color: #e3f2fd; padding: 15px; border-radius: 8px; border: 1px solid #bbdefb; margin: 20px 0;">
+              <p style="margin: 0; color: #1976d2; font-weight: bold;">📎 Archivo adjunto incluido</p>
+              <p style="margin: 5px 0 0 0; color: #555; font-size: 14px;">El reporte se encuentra en el archivo adjunto. Puedes abrirlo con Excel o cualquier programa de hojas de cálculo.</p>
+            </div>
+            ` : ''}
+          </div>
+          <div style="background-color: #f5f5f5; padding: 15px; text-align: center; border-radius: 0 0 10px 10px; border-top: 1px solid #e0e0e0;">
+            <p style="color: #666; font-size: 12px; margin: 0;">
+              Este es un mensaje automático de StockIt. No responder a este correo.<br>
+              Generado el ${new Date().toLocaleString('es-CL')}
+            </p>
+          </div>
         </div>
       `,
-      attachments: archivoPdf ? [
-        {
-          filename: "reporte-stockapp.pdf",
-          path: archivoPdf,
-          contentType: 'application/pdf'
-        }
-      ] : [],
-      // Headers adicionales para evitar spam
       headers: {
         'X-Priority': '3',
-        'X-Mailer': 'StockApp System',
-        'Return-Path': process.env.EMAIL_FROM
+        'X-Mailer': 'StockIt System v2.0',
+        'Return-Path': process.env.EMAIL_FROM || process.env.EMAIL_USER
       }
     };
 
-    console.log("📤 Enviando correo a:", destinatario);
-    if (copias.length > 0) {
-      console.log("📤 Copias a:", copias.join(', '));
+    // Manejar archivo adjunto si existe
+    if (rutaArchivo) {
+      console.log("📎 Procesando archivo adjunto...");
+      
+      // Verificar que el archivo existe
+      if (!fs.existsSync(rutaArchivo)) {
+        throw new Error(`❌ El archivo no existe: ${rutaArchivo}`);
+      }
+
+      const stats = fs.statSync(rutaArchivo);
+      const extension = path.extname(rutaArchivo).toLowerCase();
+      const nombreArchivo = path.basename(rutaArchivo);
+      
+      console.log(`   📄 Archivo: ${nombreArchivo}`);
+      console.log(`   📏 Tamaño: ${(stats.size / 1024).toFixed(2)} KB`);
+      console.log(`   🔧 Extensión: ${extension}`);
+
+      // Determinar el tipo MIME correcto
+      let contentType;
+      let encoding = 'base64'; // Por defecto usar base64 para archivos binarios
+      
+      switch (extension) {
+        case '.csv':
+          contentType = 'text/csv';
+          encoding = 'utf8'; // CSV puede enviarse como texto
+          break;
+        case '.xlsx':
+          contentType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+          break;
+        case '.xls':
+          contentType = 'application/vnd.ms-excel';
+          break;
+        case '.pdf':
+          contentType = 'application/pdf';
+          break;
+        default:
+          contentType = 'application/octet-stream';
+          console.log(`⚠️ Extensión no reconocida: ${extension}, usando tipo genérico`);
+      }
+
+      console.log(`   🏷️ Content-Type: ${contentType}`);
+      console.log(`   🔐 Encoding: ${encoding}`);
+
+      // Configurar el adjunto
+      mailOptions.attachments = [{
+        filename: nombreArchivo,
+        path: rutaArchivo,
+        contentType: contentType,
+        encoding: encoding,
+        cid: 'reporte_adjunto' // Content-ID para referenciar en HTML si es necesario
+      }];
+
+      console.log("✅ Adjunto configurado correctamente");
     }
-    console.log("📋 Asunto:", asunto);
-    
+
+    console.log("📤 Enviando correo...");
     const info = await transporter.sendMail(mailOptions);
 
-    // Log detallado de la respuesta
+    // Log detallado del éxito
     console.log("✅ Correo enviado correctamente:");
     console.log("   📧 Message ID:", info.messageId);
-    console.log("   ✅ Accepted:", info.accepted);
-    console.log("   ❌ Rejected:", info.rejected);
+    console.log("   ✅ Accepted:", info.accepted?.length || 0, "destinatarios");
+    console.log("   ❌ Rejected:", info.rejected?.length || 0, "destinatarios");
     console.log("   📝 Response:", info.response);
+
+    // Limpiar archivo temporal después del envío exitoso
+    if (rutaArchivo && fs.existsSync(rutaArchivo)) {
+      try {
+        fs.unlinkSync(rutaArchivo);
+        console.log("🗑️ Archivo temporal eliminado:", path.basename(rutaArchivo));
+      } catch (cleanupError) {
+        console.warn("⚠️ No se pudo eliminar archivo temporal:", cleanupError.message);
+      }
+    }
 
     return info;
     
   } catch (error) {
-    console.error("❌ Error enviando correo:", error);
+    console.error("❌ Error enviando correo:", error.message);
     
     // Información específica del error
     if (error.code) {
-      console.error("   🔍 Código de error:", error.code);
+      console.error("   🔢 Código de error:", error.code);
     }
     if (error.response) {
       console.error("   📝 Respuesta del servidor:", error.response);
+    }
+    if (error.command) {
+      console.error("   ⚡ Comando fallido:", error.command);
+    }
+
+    // Limpiar archivo temporal en caso de error
+    if (rutaArchivo && fs.existsSync(rutaArchivo)) {
+      try {
+        fs.unlinkSync(rutaArchivo);
+        console.log("🗑️ Archivo temporal eliminado tras error");
+      } catch (cleanupError) {
+        console.warn("⚠️ No se pudo limpiar archivo temporal:", cleanupError.message);
+      }
     }
     
     throw error; // Re-lanzar el error para que el router lo maneje
   }
 }
 
-module.exports = enviarCorreo;
+// Función auxiliar para validar configuración de correo
+function validarConfiguracion() {
+  const configuracion = {
+    email_user: !!process.env.EMAIL_USER,
+    email_pass: !!process.env.EMAIL_PASS,
+    email_from: !!process.env.EMAIL_FROM
+  };
+
+  console.log("🔍 Validando configuración de correo:");
+  Object.entries(configuracion).forEach(([key, value]) => {
+    console.log(`   ${value ? '✅' : '❌'} ${key.toUpperCase()}`);
+  });
+
+  return configuracion;
+}
+
+// Función de prueba
+async function enviarCorreoPrueba(destinatario = 'rnm.crea@gmail.com') {
+  try {
+    console.log("🧪 Iniciando prueba de correo...");
+    
+    const mensaje = `
+📧 CORREO DE PRUEBA - StockIt
+==============================
+
+🕐 Fecha: ${new Date().toLocaleString('es-CL')}
+🔧 Sistema: Funcionando correctamente
+📊 Estado: Listo para enviar reportes
+
+Esta es una prueba del sistema de correos de StockIt.
+Si recibes este mensaje, la configuración está correcta.
+
+¡El sistema está listo para enviar reportes! 🚀
+    `.trim();
+
+    await enviarCorreo(
+      destinatario,
+      '🧪 Prueba StockIt - Sistema de Correos',
+      mensaje
+    );
+
+    console.log("✅ Prueba de correo completada exitosamente");
+    return true;
+
+  } catch (error) {
+    console.error("❌ Error en prueba de correo:", error.message);
+    return false;
+  }
+}
+
+module.exports = {
+  enviarCorreo,
+  validarConfiguracion,
+  enviarCorreoPrueba
+};

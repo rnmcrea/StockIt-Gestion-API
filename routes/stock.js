@@ -1,17 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Stock = require('../models/Stock');
-const nodemailer = require('nodemailer');
-const autenticar = require('../middleware/auth'); // Asegúrate de importar el middleware
-
-// Configuración del transportador de correo
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
+const autenticar = require('../middleware/auth');
+const Usuario = require('../models/Usuario');
+const { enviarCorreo } = require('../utils/correo');
 
 // 📦 GET - Obtener todo el stock (general + de usuarios) - SOLO ADMIN
 router.get('/todos', autenticar, async (req, res) => {
@@ -53,7 +45,7 @@ router.get('/usuario/:usuario', autenticar, async (req, res) => {
   }
 });
 
-// 🔍 GET - Buscar repuesto por código (conservando tu lógica)
+// 🔍 GET - Buscar repuesto por código
 router.get('/buscar/:codigo', async (req, res) => {
   try {
     const { codigo } = req.params;
@@ -70,13 +62,13 @@ router.get('/buscar/:codigo', async (req, res) => {
   }
 });
 
-// ➕ POST - NUEVA RUTA: Agregar stock personal (la que necesita StockScreen.js)
+// ➕ POST - Agregar stock personal
 router.post('/personal', autenticar, async (req, res) => {
   try {
     const { codigo, nombre, cantidad } = req.body;
-    const usuario = req.usuario.nombre; // Del token JWT
+    const usuario = req.usuario.nombre;
 
-    console.log('📝 Agregando stock personal:', { codigo, nombre, cantidad, usuario });
+    console.log('🔍 Agregando stock personal:', { codigo, nombre, cantidad, usuario });
 
     if (!codigo || !nombre || cantidad === undefined) {
       return res.status(400).json({ message: 'Faltan campos obligatorios' });
@@ -115,7 +107,7 @@ router.post('/personal', autenticar, async (req, res) => {
       codigo: codigo.trim(),
       nombre: nombre.trim(),
       cantidad: parseInt(cantidad),
-      usuario // Asignar al usuario autenticado
+      usuario
     });
 
     await nuevoStock.save();
@@ -133,7 +125,7 @@ router.post('/personal', autenticar, async (req, res) => {
   }
 });
 
-// ➕ POST - Agregar nuevo stock GENERAL (conservando tu lógica original)
+// ➕ POST - Agregar nuevo stock GENERAL
 router.post('/', async (req, res) => {
   try {
     const { codigo, nombre, cantidad } = req.body;
@@ -149,7 +141,7 @@ router.post('/', async (req, res) => {
     // Verificar si ya existe en stock general
     const stockExistente = await Stock.findOne({ 
       codigo, 
-      usuario: null // Solo buscar en stock general
+      usuario: null
     });
 
     if (stockExistente) {
@@ -163,7 +155,7 @@ router.post('/', async (req, res) => {
       codigo,
       nombre,
       cantidad,
-      usuario: null // Stock general
+      usuario: null
     });
 
     await nuevoStock.save();
@@ -175,7 +167,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// 🔄 PUT - Actualizar stock existente (conservando tu lógica)
+// 🔄 PUT - Actualizar stock existente
 router.put('/:id', autenticar, async (req, res) => {
   try {
     const { id } = req.params;
@@ -236,7 +228,7 @@ router.get('/transferencias/:usuario', autenticar, async (req, res) => {
   }
 });
 
-// POST - Transferir stock entre usuarios (MEJORADA CON REGISTRO DE TRANSFERENCIA)
+// POST - Transferir stock entre usuarios (USANDO FUNCIÓN UNIVERSAL DE CORREO)
 router.post('/transferir-personal', autenticar, async (req, res) => {
   try {
     const { codigo, cantidadTransferir, usuarioOrigen, usuarioDestino } = req.body;
@@ -295,7 +287,7 @@ router.post('/transferir-personal', autenticar, async (req, res) => {
       await stockDestino.save();
     }
 
-    // 4. NUEVO: Registrar la transferencia en el historial
+    // 4. Registrar la transferencia en el historial
     const Transferencia = require('../models/Transferencia');
     const nuevaTransferencia = new Transferencia({
       stockId: stockOrigen._id,
@@ -309,27 +301,28 @@ router.post('/transferir-personal', autenticar, async (req, res) => {
     });
     await nuevaTransferencia.save();
 
-    // 5. Enviar correo de notificación (opcional)
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: 'rnm.crea@gmail.com', // Usar tu email fijo
-      subject: `Transferencia de Repuesto - ${codigo}`,
-      html: `
-        <h2>Transferencia de Repuesto Completada</h2>
-        <p><strong>Código:</strong> ${codigo}</p>
-        <p><strong>Repuesto:</strong> ${stockOrigen.nombre}</p>
-        <p><strong>Cantidad transferida:</strong> ${cantidadTransferir}</p>
-        <p><strong>De:</strong> ${usuarioOrigen}</p>
-        <p><strong>Para:</strong> ${usuarioDestino}</p>
-        <hr>
-        <p><strong>Stock restante origen:</strong> ${stockOrigen.cantidad}</p>
-        <p><strong>Stock destino:</strong> ${stockDestino.cantidad}</p>
-        <p><em>Fecha: ${new Date().toLocaleString('es-CL')}</em></p>
-      `
-    };
+    // 5. Enviar correo usando la función universal
+    const usuarioData = await Usuario.findOne({ nombre: usuarioOrigen }, 'nombre correo');
+
+    const cuerpoTransferencia = `
+📦 SOLICITUD DE TRASPASO DE MALETA
+================================
+
+👤 Solicitado por: ${usuarioOrigen}
+📂 Código: ${codigo}
+🔧 Repuesto: ${stockOrigen.nombre}
+📊 Cantidad: ${cantidadTransferir}
+👥 Para: ${usuarioDestino}
+
+💼 ACCIÓN REQUERIDA:
+Favor realizar el traspaso físico del repuesto entre las maletas correspondientes.
+
+📅 Fecha: ${new Date().toLocaleString('es-CL')}
+🤖 Generado automáticamente desde StockIt
+    `.trim();
 
     try {
-      await transporter.sendMail(mailOptions);
+      await enviarCorreo('rnm.crea@gmail.com', 'Solicitud de Traspaso de Maleta', cuerpoTransferencia, null, [], usuarioData);
     } catch (emailError) {
       console.error('Error enviando correo:', emailError);
     }
@@ -362,106 +355,7 @@ router.post('/transferir-personal', autenticar, async (req, res) => {
   }
 });
 
-// MANTENER TUS RUTAS EXISTENTES PARA COMPATIBILIDAD
-
-// Transferir del stock general (tu ruta original)
-router.post('/transferir', async (req, res) => {
-  try {
-    const { codigo, cantidadTransferir, usuarioDestino } = req.body;
-
-    if (!codigo || !cantidadTransferir || !usuarioDestino) {
-      return res.status(400).json({ message: 'Faltan campos obligatorios' });
-    }
-
-    if (cantidadTransferir <= 0) {
-      return res.status(400).json({ message: 'La cantidad a transferir debe ser mayor a 0' });
-    }
-
-    // 1. Buscar stock general
-    const stockGeneral = await Stock.findOne({ 
-      codigo, 
-      usuario: null 
-    });
-
-    if (!stockGeneral) {
-      return res.status(404).json({ message: 'Repuesto no encontrado en stock general' });
-    }
-
-    if (stockGeneral.cantidad < cantidadTransferir) {
-      return res.status(400).json({ 
-        message: `Stock insuficiente. Disponible: ${stockGeneral.cantidad}, Solicitado: ${cantidadTransferir}` 
-      });
-    }
-
-    // 2. Reducir cantidad del stock general
-    stockGeneral.cantidad -= cantidadTransferir;
-    await stockGeneral.save();
-
-    // 3. Buscar o crear stock del usuario
-    let stockUsuario = await Stock.findOne({ 
-      codigo, 
-      usuario: usuarioDestino 
-    });
-
-    if (stockUsuario) {
-      // Ya existe, sumar cantidad
-      stockUsuario.cantidad += cantidadTransferir;
-      await stockUsuario.save();
-    } else {
-      // No existe, crear nuevo registro
-      stockUsuario = new Stock({
-        codigo: stockGeneral.codigo,
-        nombre: stockGeneral.nombre,
-        cantidad: cantidadTransferir,
-        usuario: usuarioDestino
-      });
-      await stockUsuario.save();
-    }
-
-    // 4. Enviar correo de notificación
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: 'bodega@empresa.com',
-      subject: `Transferencia de Repuesto - ${codigo}`,
-      html: `
-        <h2>Transferencia de Repuesto</h2>
-        <p><strong>Código:</strong> ${codigo}</p>
-        <p><strong>Repuesto:</strong> ${stockGeneral.nombre}</p>
-        <p><strong>Cantidad transferida:</strong> ${cantidadTransferir}</p>
-        <p><strong>Usuario destino:</strong> ${usuarioDestino}</p>
-        <hr>
-        <p><strong>Stock restante general:</strong> ${stockGeneral.cantidad}</p>
-        <p><strong>Stock del usuario:</strong> ${stockUsuario.cantidad}</p>
-        <p><em>Fecha: ${new Date().toLocaleString('es-CL')}</em></p>
-      `
-    };
-
-    try {
-      await transporter.sendMail(mailOptions);
-    } catch (emailError) {
-      console.error('Error enviando correo:', emailError);
-    }
-
-    res.json({
-      message: 'Transferencia realizada exitosamente',
-      stockGeneral: {
-        id: stockGeneral._id,
-        cantidad: stockGeneral.cantidad
-      },
-      stockUsuario: {
-        id: stockUsuario._id,
-        cantidad: stockUsuario.cantidad,
-        usuario: stockUsuario.usuario
-      }
-    });
-
-  } catch (error) {
-    console.error('Error en transferencia:', error);
-    res.status(500).json({ message: 'Error interno del servidor' });
-  }
-});
-
-// 🔄 PUT - Eliminar una unidad (tu ruta actual)
+// 🔄 PUT - Eliminar una unidad
 router.put('/:id/remove', autenticar, async (req, res) => {
   try {
     const { id } = req.params;
