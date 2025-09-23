@@ -58,7 +58,7 @@ router.post('/login', async (req, res) => {
     const valido = await usuario.compararPassword(password);
     console.log('âœ… Â¿ContraseÃ±a vÃ¡lida?', valido);
     
-    if (!valido) return res.status(401).json({ error: 'ContraseÃ±a incorrecta' });
+    if (!valido) return res.status(401).json({ error: 'Contraseña incorrecta' });
 
     const token = jwt.sign({ id: usuario._id, nombre: usuario.nombre}, process.env.JWT_SECRET, { expiresIn: '7d' });
     

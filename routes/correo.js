@@ -237,29 +237,28 @@ router.post('/personal', autenticar, async (req, res) => {
     console.log(`   📁 Ruta: ${rutaCSV}`);
 
     // Construir asunto y mensaje
-    const tipoTexto = tipoConsumo ? ` - ${tipoConsumo}` : '';
-    const asunto = `Solicitud de ${tipoTexto} - StockIt`;
+    let asunto;
+    if (tipoConsumo === 'Facturable') {
+      asunto = `Solicitud Traspaso a FPM`;
+    } else {
+      const tipoTexto = tipoConsumo ? ` - ${tipoConsumo}` : '';
+      asunto = `Solicitud de${tipoTexto}`;
+    }
     
     const cuerpoMensaje = `
-📊 REPORTE PERSONAL DE USUARIO
-================================
+📊 **REPORTE PERSONAL DE USUARIO**
 
-👤 Usuario: ${usuario}
-📂 Tipo de consumo: ${tipoConsumo || 'Todos los tipos'}
-📅 Fecha de generación: ${new Date().toLocaleString('es-CL')}
+👤 **Usuario:** ${usuario}
+📂 **Tipo de consumo:** ${tipoConsumo || 'Todos los tipos'}
+📅 **Fecha de generación:** ${new Date().toLocaleString('es-CL')}
 
-📈 RESUMEN:
-• Total de registros nuevos: ${usos.length}
-• Último uso registrado: ${usos[0] ? new Date(usos[0].fecha).toLocaleDateString('es-CL') : 'N/A'}
-• Archivo generado: ${nombreArchivo}
-
-📝 NOTA IMPORTANTE:
-Este reporte incluye únicamente registros nuevos que no han sido enviados previamente.
-Después del envío exitoso, estos registros serán marcados como "enviados".
+📈 **RESUMEN:**
+• **Total de registros nuevos:** ${usos.length}
+• **Último uso registrado:** ${usos[0] ? new Date(usos[0].fecha).toLocaleDateString('es-CL') : 'N/A'}
+• **Archivo generado:** ${nombreArchivo}
 
 📧 Generado automáticamente desde StockIt
-🔄 Usuario solicitante: ${usuario}
-⏰ Timestamp: ${new Date().toISOString()}
+🔄 **Usuario solicitante:** ${usuario}
     `.trim();
 
     console.log(`📤 Enviando reporte con archivo adjunto...`);

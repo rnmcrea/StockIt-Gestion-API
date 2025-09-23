@@ -305,19 +305,18 @@ router.post('/transferir-personal', autenticar, async (req, res) => {
     const usuarioData = await Usuario.findOne({ nombre: usuarioOrigen }, 'nombre correo');
 
     const cuerpoTransferencia = `
-📦 SOLICITUD DE TRASPASO DE MALETA
-================================
+📦 **SOLICITUD DE TRASPASO DE MALETA**
 
-👤 Solicitado por: ${usuarioOrigen}
-📂 Código: ${codigo}
-🔧 Repuesto: ${stockOrigen.nombre}
-📊 Cantidad: ${cantidadTransferir}
-👥 Para: ${usuarioDestino}
+👤 **Solicitado por:** ${usuarioOrigen}
+📂 **Código:** ${codigo}
+🔧 **Repuesto:** ${stockOrigen.nombre}
+📊 **Cantidad:** ${cantidadTransferir}
+👥 **Para:** ${usuarioDestino}
 
 💼 ACCIÓN REQUERIDA:
 Favor realizar el traspaso físico del repuesto entre las maletas correspondientes.
 
-📅 Fecha: ${new Date().toLocaleString('es-CL')}
+📅 **Fecha:** ${new Date().toLocaleString('es-CL')}
 🤖 Generado automáticamente desde StockIt
     `.trim();
 

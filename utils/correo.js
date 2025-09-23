@@ -26,7 +26,7 @@ transporter.verify((error, success) => {
   }
 });
 
-async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, copias = []) {
+async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, copias = [], usuarioData = null) {
   try {
     console.log("📤 Preparando envío de correo...");
     console.log("   📧 Para:", destinatario);
@@ -38,7 +38,7 @@ async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, co
     // Configuración base del correo
     const mailOptions = {
       from: {
-        name: 'StockIt Sistema',
+        name: `${usuarioData?.nombre}`,
         address: process.env.EMAIL_FROM || process.env.EMAIL_USER
       },
       to: destinatario,
@@ -46,20 +46,20 @@ async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, co
       subject: asunto,
       text: cuerpo,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+        <div style="font-family: Verdana, sans-serif; max-width: 600px; margin: 0 auto; line-height: 1.6;">
           <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
             <h2 style="color: white; margin: 0; font-size: 24px;">StockIt - Reporte</h2>
           </div>
           <div style="background-color: #f9f9f9; padding: 25px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
             <p style="color: #333; font-size: 16px; margin-bottom: 20px;">Estimado usuario,</p>
-            <p style="color: #333; margin-bottom: 20px;">Adjunto encontrarás el reporte solicitado desde StockIt.</p>
+            <p style="color: #333; margin-bottom: 20px;">Adjunto encontrarás la siguiente solicitud.</p>
             <div style="background-color: white; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; margin: 20px 0;">
-              <pre style="margin: 0; white-space: pre-wrap; font-family: 'Courier New', monospace; font-size: 13px; color: #444; overflow-x: auto;">${cuerpo}</pre>
+              <div style="margin: 0; white-space: pre-wrap; font-family: Verdana; font-size: 13px; color: #444; overflow-x: auto;">${cuerpo.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</div>
             </div>
             ${rutaArchivo ? `
             <div style="background-color: #e3f2fd; padding: 15px; border-radius: 8px; border: 1px solid #bbdefb; margin: 20px 0;">
-              <p style="margin: 0; color: #1976d2; font-weight: bold;">📎 Archivo adjunto incluido</p>
-              <p style="margin: 5px 0 0 0; color: #555; font-size: 14px;">El reporte se encuentra en el archivo adjunto. Puedes abrirlo con Excel o cualquier programa de hojas de cálculo.</p>
+              <p style="margin: 0; color: #1976d2; font-family: Verdana, sans-serif; font-weight: bold;">📎 Archivo adjunto incluido</p>
+              <p style="margin: 5px 0 0 0; color: #555; font-family: Verdana, sans-serif; font-size: 14px;">El reporte se encuentra en el archivo adjunto. Puedes abrirlo con Excel o cualquier programa de hojas de cálculo.</p>
             </div>
             ` : ''}
           </div>

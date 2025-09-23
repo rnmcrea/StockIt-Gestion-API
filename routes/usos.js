@@ -150,6 +150,74 @@ router.get('/estadisticas/:usuario', autenticar, async (req, res) => {
   }
 });
 
+// PUT - Editar tipo de consumo de un uso específico
+router.put('/:id/editar-tipo', autenticar, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { tipoConsumo } = req.body;
+
+    console.log('📝 Editando tipo de consumo:', { id, tipoConsumo });
+
+    // Validar datos
+    if (!tipoConsumo) {
+      return res.status(400).json({ 
+        error: 'El tipo de consumo es obligatorio' 
+      });
+    }
+
+    if (!['Consumo', 'Facturable'].includes(tipoConsumo)) {
+      return res.status(400).json({ 
+        error: 'Tipo de consumo debe ser "Consumo" o "Facturable"' 
+      });
+    }
+
+    // Buscar el uso
+    const uso = await Uso.findById(id);
+
+    if (!uso) {
+      return res.status(404).json({ 
+        error: 'Uso no encontrado' 
+      });
+    }
+
+    // Verificar que el usuario autenticado sea el propietario del uso
+    if (uso.usuario !== req.usuario.nombre) {
+      return res.status(403).json({ 
+        error: 'No tienes permiso para editar este uso' 
+      });
+    }
+
+    // Guardar el tipo anterior para la respuesta
+    const tipoAnterior = uso.tipoConsumo || 'Sin definir';
+
+    // Actualizar el tipo de consumo
+    uso.tipoConsumo = tipoConsumo;
+    await uso.save();
+
+    console.log('✅ Tipo de consumo actualizado exitosamente');
+
+    // Responder con la información actualizada
+    res.json({
+      success: true,
+      message: 'Tipo de consumo actualizado exitosamente',
+      uso: {
+        id: uso._id,
+        tipoAnterior: tipoAnterior,
+        tipoNuevo: tipoConsumo,
+        codigo: uso.codigo,
+        nombre: uso.nombre
+      }
+    });
+
+  } catch (error) {
+    console.error('❌ Error al editar tipo de consumo:', error);
+    res.status(500).json({ 
+      error: 'Error interno del servidor',
+      details: error.message 
+    });
+  }
+});
+
 // DELETE - Eliminar un uso (solo el propietario)
 router.delete('/:id', autenticar, async (req, res) => {
   try {
