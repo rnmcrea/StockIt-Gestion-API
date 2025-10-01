@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { enviarCorreo } = require('../utils/correo');
+// const { enviarCorreo } = require('../utils/correo');
+const { enviarCorreo } = require('../utils/correoResend');
 const generarCSV = require('../utils/generarCSV');
 const Uso = require('../models/Uso');
 const autenticar = require('../middleware/auth');

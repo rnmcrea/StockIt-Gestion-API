@@ -3,7 +3,9 @@ const router = express.Router();
 const Stock = require('../models/Stock');
 const autenticar = require('../middleware/auth');
 const Usuario = require('../models/Usuario');
-const { enviarCorreo } = require('../utils/correo');
+// const { enviarCorreo } = require('../utils/correo');
+const { enviarCorreo } = require('../utils/correoResend');
+
 
 // 📦 GET - Obtener todo el stock (general + de usuarios) - SOLO ADMIN
 router.get('/todos', autenticar, async (req, res) => {

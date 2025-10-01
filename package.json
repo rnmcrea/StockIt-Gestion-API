@@ -20,9 +20,10 @@
     "mongoose": "^8.16.1",
     "node-cron": "^4.2.1",
     "nodemailer": "^7.0.5",
-    "pdfkit": "^0.17.1"
+    "pdfkit": "^0.17.1",
+    "resend": "^6.1.2"
   },
-   "engines": {
+  "engines": {
     "node": ">=18.0.0"
   }
 }
