@@ -7,7 +7,8 @@ const Uso = require('../models/Uso');
 const autenticar = require('../middleware/auth');
 
 console.log('Tipo de enviarCorreo:', typeof enviarCorreo);
-console.log('Contenido completo:', require('../utils/correo'));
+//console.log('Contenido completo:', require('../utils/correo'));
+console.log('Contenido completo:', require('../utils/correoResend'));
 
 router.post('/', async (req, res) => {
   try {
