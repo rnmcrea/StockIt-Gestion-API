@@ -66,7 +66,7 @@ async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, co
           <div style="background-color: #f5f5f5; padding: 15px; text-align: center; border-radius: 0 0 10px 10px; border-top: 1px solid #e0e0e0;">
             <p style="color: #666; font-size: 12px; margin: 0;">
               Este es un mensaje automático de StockIt. No responder a este correo.<br>
-              Generado el ${new Date().toLocaleString('es-CL')}
+              Generado el ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })}
             </p>
           </div>
         </div>

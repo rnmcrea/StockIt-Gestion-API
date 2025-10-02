@@ -318,7 +318,7 @@ router.post('/transferir-personal', autenticar, async (req, res) => {
 💼 ACCIÓN REQUERIDA:
 Favor realizar el traspaso físico del repuesto entre las maletas correspondientes.
 
-📅 **Fecha:** ${new Date().toLocaleString('es-CL')}
+📅 **Fecha:** ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })}
 🤖 Generado automáticamente desde StockIt
     `.trim();
 
