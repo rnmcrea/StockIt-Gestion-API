@@ -1,5 +1,6 @@
 const cron = require('node-cron');
-const enviarCorreo = require('../utils/correo');
+//const enviarCorreo = require('../utils/correo');
+const enviarCorreo = require('../utils/correoResend');
 const Uso = require('../models/Uso');
 
 // Función para convertir los usos a texto plano
