@@ -10,7 +10,8 @@ async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, co
     console.log("   📧 Para:", destinatario);
 
     const emailData = {
-      from: `${usuarioData?.nombre || 'StockIt'}`,
+      from: `${usuarioData?.nombre || 'StockIt'} <onboarding@resend.dev>`,
+      replyTo: usuarioData?.correo || undefined,
       to: destinatario,
       subject: asunto,
       html: `
