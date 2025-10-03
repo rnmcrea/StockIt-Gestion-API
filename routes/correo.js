@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
-// const { enviarCorreo } = require('../utils/correo');
 const { enviarCorreo } = require('../utils/correoResend');
 const generarCSV = require('../utils/generarCSV');
 const Uso = require('../models/Uso');
+const Usuario = require('../models/Usuario');
 const autenticar = require('../middleware/auth');
 
 console.log('Tipo de enviarCorreo:', typeof enviarCorreo);
-//console.log('Contenido completo:', require('../utils/correo'));
 console.log('Contenido completo:', require('../utils/correoResend'));
 
 router.post('/', async (req, res) => {
@@ -260,13 +259,16 @@ router.post('/personal', autenticar, async (req, res) => {
 • **Archivo generado:** ${nombreArchivo}
 
 📧 Generado automáticamente desde StockIt
-🔄 **Usuario solicitante:** ${usuario}
+📄 **Usuario solicitante:** ${usuario}
     `.trim();
 
     console.log(`📤 Enviando reporte con archivo adjunto...`);
     
+    // Buscar usuario completo con correo para el reply-to
+    const usuarioCompleto = await Usuario.findOne({ nombre: usuario }, 'nombre correo');
+    
     // Enviar correo con archivo CSV adjunto
-    await enviarCorreo(destinatarioFijo, asunto, cuerpoMensaje, rutaCSV, [], req.usuario);
+    await enviarCorreo(destinatarioFijo, asunto, cuerpoMensaje, rutaCSV, [], usuarioCompleto);
 
     // Marcar los registros enviados como procesados
     const idsEnviados = usos.map(uso => uso._id);
