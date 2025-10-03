@@ -30,6 +30,10 @@ async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, co
       `,
     };
 
+    console.log("👤 Usuario data completo:", JSON.stringify(usuarioData, null, 2));
+    console.log("📧 Reply-To configurado:", emailData.replyTo);
+    console.log("📤 Email data completo:", JSON.stringify(emailData, null, 2));
+
     // Manejar archivo adjunto
     if (rutaArchivo && fs.existsSync(rutaArchivo)) {
       const content = fs.readFileSync(rutaArchivo);

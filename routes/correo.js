@@ -243,7 +243,7 @@ router.post('/personal', autenticar, async (req, res) => {
     if (tipoConsumo === 'Facturable') {
       asunto = `Solicitud Traspaso a FPM`;
     } else {
-      const tipoTexto = tipoConsumo ? ` - ${tipoConsumo}` : '';
+      const tipoTexto = tipoConsumo ? ` ${tipoConsumo}` : '';
       asunto = `Solicitud de${tipoTexto}`;
     }
     
