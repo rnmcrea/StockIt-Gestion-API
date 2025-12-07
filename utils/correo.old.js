@@ -47,7 +47,7 @@ async function enviarCorreo(destinatario, asunto, cuerpo, rutaArchivo = null, co
       text: cuerpo,
       html: `
         <div style="font-family: Verdana, sans-serif; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
+          <div style="background: #0077b6; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
             <h2 style="color: white; margin: 0; font-size: 24px;">StockIt - Reporte</h2>
           </div>
           <div style="background-color: #f9f9f9; padding: 25px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">

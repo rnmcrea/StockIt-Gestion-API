@@ -37,14 +37,28 @@ function generarCSV(usos, tipoConsumo = null) {
     contenido += `"${codigo}";"${nombre}";"${cliente}";"${cantidad}";"${tipo}";"${fecha}"\n`;
   });
   
-  // Crear nombre de archivo más específico
+  // ✅ CORREGIDO: Usar zona horaria de Chile para el nombre del archivo
   const ahora = new Date();
-  const fecha = ahora.toISOString().slice(0, 10); // YYYY-MM-DD
-  const hora = ahora.toTimeString().slice(0, 8).replace(/:/g, '-'); // HH-MM-SS
+  
+  // Obtener fecha y hora en zona horaria de Chile (UTC-3)
+  const fechaChile = ahora.toLocaleDateString('es-CL', {
+    timeZone: 'America/Santiago',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).split('-').reverse().join('-'); // De DD-MM-YYYY a YYYY-MM-DD
+  
+  const horaChile = ahora.toLocaleTimeString('es-CL', {
+    timeZone: 'America/Santiago',
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  }).replace(/:/g, '-'); // De HH:MM:SS a HH-MM-SS
   
   const nombreArchivo = tipoConsumo ? 
-    `Reporte_${tipoConsumo}_${fecha}_${hora}.csv` : 
-    `Reporte_Completo_${fecha}_${hora}.csv`;
+    `Reporte_${tipoConsumo}_${fechaChile}_${horaChile}.csv` : 
+    `Reporte_Completo_${fechaChile}_${horaChile}.csv`;
     
   const rutaArchivo = path.join(__dirname, '..', 'tmp', nombreArchivo);
   
@@ -58,9 +72,9 @@ function generarCSV(usos, tipoConsumo = null) {
     // Escribir archivo con codificación UTF-8 explícita
     fs.writeFileSync(rutaArchivo, contenido, { encoding: 'utf8' });
     
-    console.log(`✅ CSV generado exitosamente: ${nombreArchivo}`);
-    console.log(`📁 Ruta: ${rutaArchivo}`);
-    console.log(`📊 Registros: ${usos.length}`);
+    console.log(`CSV generado exitosamente: ${nombreArchivo}`);
+    console.log(`Ruta: ${rutaArchivo}`);
+    console.log(`Registros: ${usos.length}`);
     
     // Verificar que el archivo se creó correctamente
     const stats = fs.statSync(rutaArchivo);
@@ -74,6 +88,5 @@ function generarCSV(usos, tipoConsumo = null) {
     throw new Error(`No se pudo generar el archivo CSV: ${error.message}`);
   }
 }
-
 
 module.exports = generarCSV;

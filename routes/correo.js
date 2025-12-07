@@ -173,6 +173,7 @@ router.get('/test', async (req, res) => {
 });
 
 // POST /personal - Enviar reporte personal del usuario
+
 router.post('/personal', autenticar, async (req, res) => {
   try {
     const { destinatario, usuario, tipoConsumo } = req.body;
@@ -184,9 +185,27 @@ router.post('/personal', autenticar, async (req, res) => {
       return res.status(403).json({ error: 'No puedes solicitar reportes de otros usuarios' });
     }
 
-    const destinatarioFijo = 'rnm.crea@gmail.com';
+    // Usar variables de entorno para destinatarios
+    const emailPrincipal = process.env.REPORT_EMAIL_PRINCIPAL || 'rnm.crea@gmail.com';
+    const emailsCopia = process.env.REPORT_EMAIL_COPIA 
+      ? process.env.REPORT_EMAIL_COPIA.split(',').map(email => email.trim())
+      : [];
+
+      console.log('🔍 Variables de entorno RAW:');
+      console.log('   REPORT_EMAIL_PRINCIPAL:', process.env.REPORT_EMAIL_PRINCIPAL);
+      console.log('   REPORT_EMAIL_COPIA:', process.env.REPORT_EMAIL_COPIA);
+      console.log('🔍 Variables procesadas:');
+      console.log('   emailPrincipal:', emailPrincipal);
+      console.log('   emailsCopia:', emailsCopia);
+      console.log('   Cantidad de copias:', emailsCopia.length);
+      
+      console.log(`📤 Generando reporte de ${usuario} para ${emailPrincipal}`);
     
-    console.log(`📤 Generando reporte de ${usuario} para ${destinatarioFijo}`);
+    console.log(`📤 Generando reporte de ${usuario} para ${emailPrincipal}`);
+    if (emailsCopia.length > 0) {
+      console.log(`📧 Copias a: ${emailsCopia.join(', ')}`);
+    }
+
 
     // Construir filtro: usuario + tipo (opcional) + NO enviados manualmente
     let filtro = { 
@@ -267,8 +286,8 @@ router.post('/personal', autenticar, async (req, res) => {
     // Buscar usuario completo con correo para el reply-to
     const usuarioCompleto = await Usuario.findOne({ nombre: usuario }, 'nombre correo');
     
-    // Enviar correo con archivo CSV adjunto
-    await enviarCorreo(destinatarioFijo, asunto, cuerpoMensaje, rutaCSV, [], usuarioCompleto);
+    // Enviar correo con archivo CSV adjunto usando variables de entorno
+    await enviarCorreo(emailPrincipal, asunto, cuerpoMensaje, rutaCSV, emailsCopia, usuarioCompleto);
 
     // Marcar los registros enviados como procesados
     const idsEnviados = usos.map(uso => uso._id);
@@ -288,7 +307,9 @@ router.post('/personal', autenticar, async (req, res) => {
 
     res.json({ 
       mensaje: mensajeRespuesta,
-      destinatario: destinatarioFijo,
+      destinatario: emailPrincipal,
+      copias: emailsCopia,
+      totalDestinatarios: 1 + emailsCopia.length,
       usuario: usuario,
       tipoConsumo: tipoConsumo || 'Todos',
       registros: usos.length,

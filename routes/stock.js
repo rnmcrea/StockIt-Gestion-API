@@ -3,9 +3,7 @@ const router = express.Router();
 const Stock = require('../models/Stock');
 const autenticar = require('../middleware/auth');
 const Usuario = require('../models/Usuario');
-// const { enviarCorreo } = require('../utils/correo');
 const { enviarCorreo } = require('../utils/correoResend');
-
 
 // 📦 GET - Obtener todo el stock (general + de usuarios) - SOLO ADMIN
 router.get('/todos', autenticar, async (req, res) => {
@@ -230,7 +228,7 @@ router.get('/transferencias/:usuario', autenticar, async (req, res) => {
   }
 });
 
-// POST - Transferir stock entre usuarios (USANDO FUNCIÓN UNIVERSAL DE CORREO)
+// POST - Transferir stock entre usuarios (CON VARIABLES DE ENTORNO)
 router.post('/transferir-personal', autenticar, async (req, res) => {
   try {
     const { codigo, cantidadTransferir, usuarioOrigen, usuarioDestino } = req.body;
@@ -303,8 +301,14 @@ router.post('/transferir-personal', autenticar, async (req, res) => {
     });
     await nuevaTransferencia.save();
 
-    // 5. Enviar correo usando la función universal
+    // 5. Enviar correo usando variables de entorno
     const usuarioData = await Usuario.findOne({ nombre: usuarioOrigen }, 'nombre correo');
+
+    // Leer destinatarios de variables de entorno
+    const emailPrincipal = process.env.REPORT_EMAIL_PRINCIPAL || 'rnm.crea@gmail.com';
+    const emailsCopia = process.env.REPORT_EMAIL_COPIA 
+      ? process.env.REPORT_EMAIL_COPIA.split(',').map(email => email.trim())
+      : [];
 
     const cuerpoTransferencia = `
 📦 **SOLICITUD DE TRASPASO DE MALETA**
@@ -323,7 +327,8 @@ Favor realizar el traspaso físico del repuesto entre las maletas correspondient
     `.trim();
 
     try {
-      await enviarCorreo('rnm.crea@gmail.com', 'Solicitud de Traspaso de Maleta', cuerpoTransferencia, null, [], usuarioData);
+      await enviarCorreo(emailPrincipal, 'Solicitud de Traspaso de Maleta', cuerpoTransferencia, null, emailsCopia, usuarioData);
+      console.log(`📧 Notificación enviada a ${emailPrincipal}${emailsCopia.length > 0 ? ` y ${emailsCopia.length} copias` : ''}`);
     } catch (emailError) {
       console.error('Error enviando correo:', emailError);
     }
