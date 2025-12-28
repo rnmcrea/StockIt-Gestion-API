@@ -66,7 +66,7 @@ const emailConfig = {
     reporte: (cuerpo) => `
       <p style="color: #333; font-size: 16px; margin-bottom: 20px;">Estimado usuario,</p>
       <p style="color: #333; margin-bottom: 20px;">Adjunto encontrarás la siguiente solicitud.</p>
-      <div style="background-color: white; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; margin: 20px 0;">
+      <div style="background-color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
         <div style="margin: 0; white-space: pre-wrap; font-family: Verdana; font-size: 13px; color: #444;">
           ${cuerpo.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}
         </div>
