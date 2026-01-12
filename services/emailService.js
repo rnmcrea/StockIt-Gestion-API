@@ -21,7 +21,7 @@ class EmailService {
    * Envía un email con la estrategia apropiada según la configuración
    */
   async enviar(opciones) {
-    const { destinatario, asunto, cuerpo, rutaArchivo, copias = [], usuarioData } = opciones;
+    const { destinatario, asunto, cuerpo, rutaArchivo, copias = [], usuarioData, bcc = [] } = opciones;
 
     try {
       console.log("\n📤 ═══════════════════════════════════════");
@@ -29,6 +29,9 @@ class EmailService {
       console.log(`📧 Para: ${destinatario}`);
       if (copias.length > 0) {
         console.log(`📋 Copias (${copias.length}): ${copias.join(', ')}`);
+      }
+      if (bcc.length > 0) {
+        console.log(`🔒 BCC - Copias ocultas (${bcc.length}): ${bcc.join(', ')}`);
       }
 
       // Preparar datos base del email
@@ -38,10 +41,10 @@ class EmailService {
 
       if (this.strategy.useCC) {
         // Estrategia 1: Dominio verificado - Usar CC
-        resultado = await this.enviarConCC(destinatario, copias, emailBase);
+        resultado = await this.enviarConCC(destinatario, copias, emailBase, bcc);
       } else {
         // Estrategia 2: Sandbox - Envíos individuales
-        resultado = await this.enviarIndividual(destinatario, copias, emailBase);
+        resultado = await this.enviarIndividual(destinatario, copias, emailBase, bcc);
       }
 
       // Limpiar archivo temporal
@@ -88,7 +91,7 @@ class EmailService {
   /**
    * Estrategia 1: Envío con CC (requiere dominio verificado)
    */
-  async enviarConCC(destinatario, copias, emailBase) {
+  async enviarConCC(destinatario, copias, emailBase, bcc = []) {
     console.log("\n🚀 Enviando con CC (dominio verificado)...");
 
     const emailData = {
@@ -98,6 +101,9 @@ class EmailService {
 
     if (copias.length > 0) {
       emailData.cc = copias;
+    }
+    if (bcc.length > 0) {
+      emailData.bcc = bcc;
     }
 
     try {
@@ -128,8 +134,12 @@ class EmailService {
   /**
    * Estrategia 2: Envíos individuales (para sandbox o fallback)
    */
-  async enviarIndividual(destinatario, copias, emailBase) {
+  async enviarIndividual(destinatario, copias, emailBase, bcc = []) {
     const todosLosDestinatarios = [destinatario, ...copias];
+
+    if (bcc.length > 0) {
+      emailBase.bcc = bcc;
+    }
     
     console.log(`\n🚀 Enviando ${todosLosDestinatarios.length} emails individuales...`);
 

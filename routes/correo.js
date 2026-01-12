@@ -190,6 +190,10 @@ router.post('/personal', autenticar, async (req, res) => {
     const emailsCopia = process.env.REPORT_EMAIL_COPIA 
       ? process.env.REPORT_EMAIL_COPIA.split(',').map(email => email.trim())
       : [];
+    
+    const emailsBCC = process.env.REPORT_EMAIL_BCC 
+    ? process.env.REPORT_EMAIL_BCC.split(',').map(email => email.trim())
+    : [];
 
       console.log('🔍 Variables de entorno RAW:');
       console.log('   REPORT_EMAIL_PRINCIPAL:', process.env.REPORT_EMAIL_PRINCIPAL);
@@ -287,7 +291,7 @@ router.post('/personal', autenticar, async (req, res) => {
     const usuarioCompleto = await Usuario.findOne({ nombre: usuario }, 'nombre correo');
     
     // Enviar correo con archivo CSV adjunto usando variables de entorno
-    await enviarCorreo(emailPrincipal, asunto, cuerpoMensaje, rutaCSV, emailsCopia, usuarioCompleto);
+    await enviarCorreo(emailPrincipal, asunto, cuerpoMensaje, rutaCSV, emailsCopia, usuarioCompleto, emailsBCC);
 
     // Marcar los registros enviados como procesados
     const idsEnviados = usos.map(uso => uso._id);
