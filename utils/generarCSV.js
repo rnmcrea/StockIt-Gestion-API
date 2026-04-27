@@ -4,14 +4,53 @@ const path = require('path');
 function generarCSV(usos, tipoConsumo = null) {
   console.log(`Generando CSV para ${usos.length} registros${tipoConsumo ? ` de tipo ${tipoConsumo}` : ''}`);
   
+  // ============================================
+  // AGRUPAR POR CÓDIGO Y SUMAR CANTIDADES
+  // ============================================
+  const usosAgrupados = {};
+  
+  usos.forEach(uso => {
+    const key = uso.codigo;
+    
+    if (usosAgrupados[key]) {
+      // Si ya existe este código, SUMAR la cantidad
+      usosAgrupados[key].cantidad += uso.cantidad;
+      
+      
+      // Actualizar con la fecha más reciente
+      if (new Date(uso.fecha) > new Date(usosAgrupados[key].fecha)) {
+        usosAgrupados[key].fecha = uso.fecha;
+      }
+    } else {
+      // Si no existe, crear nuevo registro agrupado
+      usosAgrupados[key] = {
+        codigo: uso.codigo,
+        nombre: uso.nombre,
+        cliente: uso.cliente,
+        cantidad: uso.cantidad,
+        tipoConsumo: uso.tipoConsumo || 'N/A',
+        fecha: uso.fecha,
+      };
+    }
+  });
+
+  // Convertir objeto a array
+  const usosParaCSV = Object.values(usosAgrupados);
+  
+  console.log(`📦 Registros agrupados: ${usosParaCSV.length}`);
+  
+  // ============================================
+  // GENERAR CSV CON DATOS AGRUPADOS
+  // ============================================
+  
   // AGREGAR BOM para que Excel reconozca UTF-8 correctamente
   const BOM = '\uFEFF';
   
   // Encabezados del CSV (usando punto y coma para compatibilidad con Excel en español)
-  let contenido = BOM + 'CODIGO;REPUESTO;CLIENTE;CANTIDAD;TIPO;FECHA\n';
+  let contenido = BOM + 'CODIGO;REPUESTO;CLIENTE;CANTIDAD TOTAL;TIPO;FECHA;REGISTROS COMBINADOS\n';
   
-  // Datos
-  usos.forEach(uso => {
+  // Datos agrupados
+  usosParaCSV.forEach(uso => {
     const fecha = new Date(uso.fecha).toLocaleDateString('es-CL', {
       day: '2-digit',
       month: '2-digit', 
@@ -31,13 +70,14 @@ function generarCSV(usos, tipoConsumo = null) {
     const codigo = limpiarCampo(uso.codigo);
     const nombre = limpiarCampo(uso.nombre);
     const cliente = limpiarCampo(uso.cliente);
-    const tipo = limpiarCampo(uso.tipoConsumo || 'N/A');
+    const tipo = limpiarCampo(uso.tipoConsumo);
     const cantidad = uso.cantidad || 0;
+ 
     
-    contenido += `"${codigo}";"${nombre}";"${cliente}";"${cantidad}";"${tipo}";"${fecha}"\n`;
+    contenido += `"${codigo}";"${nombre}";"${cliente}";"${cantidad}";"${tipo}"\n`;
   });
   
-  // ✅ CORREGIDO: Usar zona horaria de Chile para el nombre del archivo
+  // Usar zona horaria de Chile para el nombre del archivo
   const ahora = new Date();
   
   // Obtener fecha y hora en zona horaria de Chile (UTC-3)
@@ -72,9 +112,9 @@ function generarCSV(usos, tipoConsumo = null) {
     // Escribir archivo con codificación UTF-8 explícita
     fs.writeFileSync(rutaArchivo, contenido, { encoding: 'utf8' });
     
-    console.log(`CSV generado exitosamente: ${nombreArchivo}`);
-    console.log(`Ruta: ${rutaArchivo}`);
-    console.log(`Registros: ${usos.length}`);
+    console.log(`✅ CSV generado exitosamente: ${nombreArchivo}`);
+    console.log(`📍 Ruta: ${rutaArchivo}`);
+    console.log(`📦 Líneas en CSV (agrupadas): ${usosParaCSV.length}`);
     
     // Verificar que el archivo se creó correctamente
     const stats = fs.statSync(rutaArchivo);
