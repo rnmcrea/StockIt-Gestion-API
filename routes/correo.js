@@ -286,12 +286,24 @@ router.post('/personal', autenticar, async (req, res) => {
     `.trim();
 
     console.log(`📤 Enviando reporte con archivo adjunto...`);
-    
+
     // Buscar usuario completo con correo para el reply-to
     const usuarioCompleto = await Usuario.findOne({ nombre: usuario }, 'nombre correo');
-    
+
+    // Incluir en copia el correo corporativo de quien envía el reporte
+    // (evitando duplicados con el destinatario principal y las copias fijas)
+    const copiasFinales = [...emailsCopia];
+    if (
+      usuarioCompleto?.correo &&
+      usuarioCompleto.correo !== emailPrincipal &&
+      !copiasFinales.includes(usuarioCompleto.correo)
+    ) {
+      copiasFinales.push(usuarioCompleto.correo);
+      console.log(`📧 Copia al correo del solicitante: ${usuarioCompleto.correo}`);
+    }
+
     // Enviar correo con archivo CSV adjunto usando variables de entorno
-    await enviarCorreo(emailPrincipal, asunto, cuerpoMensaje, rutaCSV, emailsCopia, usuarioCompleto, emailsBCC);
+    await enviarCorreo(emailPrincipal, asunto, cuerpoMensaje, rutaCSV, copiasFinales, usuarioCompleto, emailsBCC);
 
     // Marcar los registros enviados como procesados
     const idsEnviados = usos.map(uso => uso._id);
