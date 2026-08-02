@@ -361,11 +361,13 @@ Favor realizar el traspaso físico del repuesto entre las maletas correspondient
   }
 });
 
-// 🔄 PUT - Eliminar una unidad
+// 🔄 PUT - Descontar unidades del stock (por defecto 1).
+// Acepta { cantidad } en el body para quitar varias de una vez.
 router.put('/:id/remove', autenticar, async (req, res) => {
   try {
     const { id } = req.params;
-    
+    const aQuitar = parseInt(req.body?.cantidad) || 1;
+
     const stock = await Stock.findById(id);
     if (!stock) {
       return res.status(404).json({ error: 'Stock no encontrado' });
@@ -375,22 +377,26 @@ router.put('/:id/remove', autenticar, async (req, res) => {
     if (stock.usuario && stock.usuario !== req.usuario.nombre) {
       return res.status(403).json({ error: 'No tienes permiso para modificar este stock' });
     }
-    
-    if (stock.cantidad <= 1) {
-      // Eliminar completamente si solo queda 1
+
+    if (aQuitar <= 0) {
+      return res.status(400).json({ error: 'La cantidad a quitar debe ser mayor a 0' });
+    }
+
+    if (aQuitar >= stock.cantidad) {
+      // Se quitan todas (o más de las que hay) → eliminar por completo
       await Stock.findByIdAndDelete(id);
-      res.json({ 
-        eliminado: true, 
-        mensaje: 'Repuesto eliminado completamente' 
+      res.json({
+        eliminado: true,
+        mensaje: 'Repuesto eliminado completamente'
       });
     } else {
-      // Reducir cantidad en 1
-      stock.cantidad -= 1;
+      // Reducir la cantidad indicada
+      stock.cantidad -= aQuitar;
       await stock.save();
-      res.json({ 
-        eliminado: false, 
+      res.json({
+        eliminado: false,
         item: stock,
-        mensaje: `Cantidad reducida a ${stock.cantidad}` 
+        mensaje: `Cantidad reducida a ${stock.cantidad}`
       });
     }
   } catch (error) {

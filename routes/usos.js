@@ -182,8 +182,15 @@ router.put('/:id/editar-tipo', autenticar, async (req, res) => {
 
     // Verificar que el usuario autenticado sea el propietario del uso
     if (uso.usuario !== req.usuario.nombre) {
-      return res.status(403).json({ 
-        error: 'No tienes permiso para editar este uso' 
+      return res.status(403).json({
+        error: 'No tienes permiso para editar este uso'
+      });
+    }
+
+    // Bloquear si el uso ya fue enviado en un reporte
+    if (uso.enviadoManual) {
+      return res.status(409).json({
+        error: 'Este uso ya fue enviado en un reporte y no puede modificarse'
       });
     }
 
@@ -218,11 +225,12 @@ router.put('/:id/editar-tipo', autenticar, async (req, res) => {
   }
 });
 
-// DELETE - Eliminar un uso (solo el propietario)
+// DELETE - Eliminar un uso y devolver la cantidad al stock personal
+// (solo el propietario, y solo si el uso NO fue enviado en un reporte)
 router.delete('/:id', autenticar, async (req, res) => {
   try {
     const { id } = req.params;
-    
+
     const uso = await Uso.findById(id);
     if (!uso) {
       return res.status(404).json({ error: 'Uso no encontrado' });
@@ -233,10 +241,36 @@ router.delete('/:id', autenticar, async (req, res) => {
       return res.status(403).json({ error: 'No tienes permiso para eliminar este uso' });
     }
 
+    // Bloquear si el uso ya fue enviado en un reporte
+    if (uso.enviadoManual) {
+      return res.status(409).json({
+        error: 'Este uso ya fue enviado en un reporte y no puede eliminarse'
+      });
+    }
+
+    // Devolver la cantidad al stock personal del usuario.
+    // Si el registro de stock ya no existe (llegó a 0 al registrar el uso), se recrea.
+    let stock = await Stock.findOne({ codigo: uso.codigo, usuario: uso.usuario });
+    if (stock) {
+      stock.cantidad += uso.cantidad;
+      await stock.save();
+    } else {
+      stock = new Stock({
+        codigo: uso.codigo,
+        nombre: uso.nombre,
+        cantidad: uso.cantidad,
+        usuario: uso.usuario
+      });
+      await stock.save();
+    }
+
     await Uso.findByIdAndDelete(id);
-    
-    console.log(`🗑️ Uso eliminado por ${req.usuario.nombre}:`, id);
-    res.json({ message: 'Uso eliminado correctamente' });
+
+    console.log(`🗑️➡️📦 Uso eliminado por ${req.usuario.nombre} y ${uso.cantidad}x ${uso.codigo} devuelto al stock`);
+    res.json({
+      message: 'Uso eliminado y cantidad devuelta al stock',
+      stock: { codigo: stock.codigo, cantidad: stock.cantidad }
+    });
 
   } catch (error) {
     console.error('❌ Error al eliminar uso:', error);
