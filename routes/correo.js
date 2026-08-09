@@ -274,7 +274,7 @@ router.post('/personal', autenticar, async (req, res) => {
 
 👤 **Usuario:** ${usuario}
 📂 **Tipo de consumo:** ${tipoConsumo || 'Todos los tipos'}
-📅 **Fecha de generación:** ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })}
+📅 **Fecha de generación:** ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}
 
 📈 **RESUMEN:**
 • **Total de registros nuevos:** ${usos.length}
