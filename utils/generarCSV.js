@@ -47,16 +47,10 @@ function generarCSV(usos, tipoConsumo = null) {
   const BOM = '\uFEFF';
   
   // Encabezados del CSV (usando punto y coma para compatibilidad con Excel en español)
-  let contenido = BOM + 'CODIGO;REPUESTO;CLIENTE;CANTIDAD TOTAL;TIPO;FECHA;REGISTROS COMBINADOS\n';
-  
+  let contenido = BOM + 'CODIGO;REPUESTO;CLIENTE;CANTIDAD TOTAL;TIPO\n';
+
   // Datos agrupados
   usosParaCSV.forEach(uso => {
-    const fecha = new Date(uso.fecha).toLocaleDateString('es-CL', {
-      day: '2-digit',
-      month: '2-digit', 
-      year: 'numeric'
-    }); // Formato DD/MM/YYYY
-    
     // Función para escapar y limpiar campos CSV
     const limpiarCampo = (campo) => {
       if (!campo) return '';
