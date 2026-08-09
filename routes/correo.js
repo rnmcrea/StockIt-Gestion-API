@@ -280,9 +280,6 @@ router.post('/personal', autenticar, async (req, res) => {
 • **Total de registros nuevos:** ${usos.length}
 • **Último uso registrado:** ${usos[0] ? new Date(usos[0].fecha).toLocaleDateString('es-CL') : 'N/A'}
 • **Archivo generado:** ${nombreArchivo}
-
-📧 Generado automáticamente desde StockIt
-📄 **Usuario solicitante:** ${usuario}
     `.trim();
 
     console.log(`📤 Enviando reporte con archivo adjunto...`);
