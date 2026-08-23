@@ -5,7 +5,10 @@ const usuarioSchema = new mongoose.Schema({
   nombre: { type: String, required: true },
   correo: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  
+
+  // Rol del usuario: 'tecnico' (por defecto) o 'admin' (supervisor de solo lectura)
+  rol: { type: String, enum: ['tecnico', 'admin'], default: 'tecnico' },
+
   // Campos para recuperaciÃ³n de contraseÃ±a
   resetPasswordToken: { 
     type: String, 

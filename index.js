@@ -36,6 +36,8 @@ app.use('/api/codigos', require('./routes/codigosRepuesto'));
 
 app.use('/api/usuarios', require('./routes/usuarios'));
 
+app.use('/api/admin', require('./routes/admin'));
+
 // Ruta básica
 app.get('/', (req, res) => {
   res.json({ 

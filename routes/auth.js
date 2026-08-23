@@ -60,16 +60,18 @@ router.post('/login', async (req, res) => {
     
     if (!valido) return res.status(401).json({ error: 'Contraseña incorrecta' });
 
-    const token = jwt.sign({ id: usuario._id, nombre: usuario.nombre}, process.env.JWT_SECRET, { expiresIn: '7d' });
-    
-    console.log('âœ… Login exitoso para:', usuario.nombre);
-    res.json({ 
-      token, 
-      usuario: { 
-        id: usuario._id, 
-        nombre: usuario.nombre, 
-        correo: usuario.correo 
-      } 
+    const rol = usuario.rol || 'tecnico';
+    const token = jwt.sign({ id: usuario._id, nombre: usuario.nombre, rol }, process.env.JWT_SECRET, { expiresIn: '7d' });
+
+    console.log('âœ… Login exitoso para:', usuario.nombre, '| rol:', rol);
+    res.json({
+      token,
+      usuario: {
+        id: usuario._id,
+        nombre: usuario.nombre,
+        correo: usuario.correo,
+        rol
+      }
     });
   } catch (err) {
     console.error('âŒ Error en login:', err);
@@ -160,6 +162,47 @@ router.post('/reset-password', async (req, res) => {
   } catch (err) {
     console.error('âŒ Error en reset:', err);
     res.status(500).json({ error: 'Error al actualizar la contraseÃ±a' });
+  }
+});
+
+// POST /api/auth/promover-admin
+// Bootstrap para asignar rol 'admin' a una cuenta existente.
+// Requiere la clave ADMIN_SETUP_KEY (definida en variables de entorno de Render).
+// Si ADMIN_SETUP_KEY no está configurada, el endpoint queda deshabilitado.
+router.post('/promover-admin', async (req, res) => {
+  const { correo, clave, rol } = req.body;
+
+  if (!process.env.ADMIN_SETUP_KEY) {
+    return res.status(404).json({ error: 'Función no disponible' });
+  }
+
+  if (!clave || clave !== process.env.ADMIN_SETUP_KEY) {
+    return res.status(403).json({ error: 'Clave de configuración inválida' });
+  }
+
+  if (!correo) {
+    return res.status(400).json({ error: 'El correo es requerido' });
+  }
+
+  const rolFinal = rol === 'tecnico' ? 'tecnico' : 'admin';
+
+  try {
+    const usuario = await Usuario.findOne({ correo: correo.trim().toLowerCase() });
+    if (!usuario) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+
+    usuario.rol = rolFinal;
+    await usuario.save();
+
+    console.log(`✅ Rol actualizado: ${usuario.correo} → ${rolFinal}`);
+    res.json({
+      mensaje: `Rol actualizado a "${rolFinal}"`,
+      usuario: { nombre: usuario.nombre, correo: usuario.correo, rol: usuario.rol }
+    });
+  } catch (err) {
+    console.error('❌ Error al promover usuario:', err);
+    res.status(500).json({ error: 'No se pudo actualizar el rol' });
   }
 });
 
